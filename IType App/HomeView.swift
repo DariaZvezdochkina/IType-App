@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var searchText = ""
-
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -19,7 +19,7 @@ struct HomeView: View {
                             GeometryReader { geometry in
                                 RoundedRectangle(cornerRadius: 30)
                                     .foregroundColor(Color.white)
-                                    .shadow(color: Color("MainFrameColor"), radius: 3)
+                                    .shadow(color: Color("MainFrameColor"), radius: 4)
                                     .rotation3DEffect(
                                         Angle(
                                             degrees: Double((geometry.frame(in: .global).minX - 20) / -20)
@@ -37,8 +37,13 @@ struct HomeView: View {
                 }
                 VStack(alignment: .trailing) {
                     Text("Vacancies for You")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     Spacer()
                 }
+                .padding()
+                
                 .navigationTitle("Home")
                 .searchable(text: $searchText, prompt: "Job title, key words")
                 Spacer()
@@ -47,7 +52,7 @@ struct HomeView: View {
                         RoundedRectangle(cornerRadius: 30)
                     }
                     .foregroundColor(Color.white)
-                    .shadow(color: Color("MainFrameColor"), radius: 3)
+                    .shadow(color: Color("MainFrameColor"), radius: 4)
                     .frame(width: 360, height: 400)
                 }
             }
