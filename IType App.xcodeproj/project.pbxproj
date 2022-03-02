@@ -93,11 +93,11 @@
 				5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */,
 				5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */,
 				5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */,
+				5E7506DB27CE30CB0065BFC0 /* HomeView.swift */,
 				5E10C0A327C3BEB300D9B5E2 /* ContentView.swift */,
 				5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */,
 				5E10C0A527C3BEBC00D9B5E2 /* Assets.xcassets */,
 				5E10C0A727C3BEBC00D9B5E2 /* Preview Content */,
-				5E7506DB27CE30CB0065BFC0 /* HomeView.swift */,
 			);
 			path = "IType App";
 			sourceTree = "<group>";

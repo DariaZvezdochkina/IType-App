@@ -19,7 +19,7 @@ struct TabsView: View {
         VStack {
             TabView(selection: $route) {
                 
-                Text("Person")
+                ProfileView()
                     .tabItem {
                         Image(systemName: "person")
                             .foregroundColor(Color("MainFrameColor"))
@@ -28,12 +28,12 @@ struct TabsView: View {
                     .tag(Route.profile)
                 
                 HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                        .foregroundColor(Color("MainFrameColor"))
-                    Text("Home")
-                }
-                .tag(Route.home)
+                    .tabItem {
+                        Image(systemName: "house")
+                            .foregroundColor(Color("MainFrameColor"))
+                        Text("Home")
+                    }
+                    .tag(Route.home)
                 Text("Settings")
                     .tabItem {
                         Image(systemName: "gear")

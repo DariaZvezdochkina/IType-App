@@ -14,12 +14,12 @@ struct HomeView: View {
         NavigationView {
             ScrollView {
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
+                    HStack(spacing: 15) {
                         ForEach(0 ..< 5) { item in
                             GeometryReader { geometry in
                                 RoundedRectangle(cornerRadius: 30)
                                     .foregroundColor(Color.white)
-                                    .shadow(color: Color("MainFrameColor"), radius: 5)
+                                    .shadow(color: Color("MainFrameColor"), radius: 3)
                                     .rotation3DEffect(
                                         Angle(
                                             degrees: Double((geometry.frame(in: .global).minX - 20) / -20)
@@ -30,7 +30,7 @@ struct HomeView: View {
                                         perspective: 1.0
                                     )
                             }
-                            .frame(width: 160, height: 160)
+                            .frame(width: 150, height: 150)
                         }
                     }
                     .padding()
@@ -39,7 +39,6 @@ struct HomeView: View {
                     Text("Vacancies for You")
                     Spacer()
                 }
-                .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Home")
                 .searchable(text: $searchText, prompt: "Job title, key words")
                 Spacer()
@@ -48,12 +47,13 @@ struct HomeView: View {
                         RoundedRectangle(cornerRadius: 30)
                     }
                     .foregroundColor(Color.white)
-                    .shadow(color: Color("MainFrameColor"), radius: 5)
-                    .frame(width: 350, height: 500)
+                    .shadow(color: Color("MainFrameColor"), radius: 3)
+                    .frame(width: 360, height: 400)
                 }
             }
             
         }
+        .padding()
     }
 }
 
