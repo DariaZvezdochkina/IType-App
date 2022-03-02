@@ -29,14 +29,15 @@ struct ProfileView: View {
                 }) {
                     HStack {
                         Text("Create")
-                            .fontWeight(.semibold)
+                            .fontWeight(.bold)
                             .font(.title)
                     }
                     .frame(width: 150, height: 30)
                     .padding()
-                    .foregroundColor(.white)
-                    .background(Color("MainFrameColor"))
+                    .foregroundColor(Color("MainFrameColor"))
+                    .background(.white)
                     .cornerRadius(40)
+                    .shadow(color: Color("MainFrameColor"), radius: 5)
                 }
             }
             .navigationTitle("Profile")
