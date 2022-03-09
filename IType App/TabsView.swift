@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TabsView: View {
     enum Route: String, Hashable {
-        case home, profile, settings
+        case home, profile,favourites, settings
     }
     
     @State var route: Route = .home
@@ -33,6 +33,14 @@ struct TabsView: View {
                         Text("Profile")
                     }
                     .tag(Route.profile)
+                
+                FavouritesView()
+                    .tabItem {
+                        Image(systemName: "heart")
+                            .foregroundColor(Color("MainFrameColor"))
+                        Text("Favourites")
+                    }
+                    .tag(Route.favourites)
                 
                 
                 Text("Settings")
