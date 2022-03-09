@@ -43,7 +43,7 @@ struct TabsView: View {
                     .tag(Route.favourites)
                 
                 
-                Text("Settings")
+                SettingsView()
                     .tabItem {
                         Image(systemName: "gear")
                             .foregroundColor(Color("MainFrameColor"))
