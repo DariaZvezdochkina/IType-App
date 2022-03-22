@@ -18,6 +18,7 @@ struct SettingsView: View {
                             SettingsCell(title: "Notifications", imgNmae: "bell", clr: Color("MainFrameColor"))
                         }
                         .foregroundColor(.black)
+                        
                         Button(action: {}) {
                             SettingsCell(title: "Profile", imgNmae: "person", clr: Color("MainFrameColor"))
                         }

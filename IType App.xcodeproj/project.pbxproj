@@ -13,12 +13,24 @@
 		5E10C0A927C3BEBC00D9B5E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E10C0A827C3BEBC00D9B5E2 /* Preview Assets.xcassets */; };
 		5E10C0B027C3C1D100D9B5E2 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */; };
 		5E10C0B227C3CD1700D9B5E2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */; };
-		5E10C0B527C3D2FD00D9B5E2 /* DecodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10C0B427C3D2FD00D9B5E2 /* DecodingService.swift */; };
 		5E10C15F27C50A6B00D9B5E2 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */; };
 		5E49E5A327D0DC630006BDB6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A227D0DC630006BDB6 /* SettingsView.swift */; };
 		5E49E5A527D8A4A10006BDB6 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */; };
 		5E49E5A727D8AB460006BDB6 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A627D8AB460006BDB6 /* SettingsCell.swift */; };
 		5E49E5A927D8B3D00006BDB6 /* VacancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A827D8B3D00006BDB6 /* VacancyView.swift */; };
+		5E5468A927E9D7C1006D11C5 /* Vacancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468A827E9D7C1006D11C5 /* Vacancy.swift */; };
+		5E5468AB27E9D806006D11C5 /* Vacancies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468AA27E9D806006D11C5 /* Vacancies.swift */; };
+		5E5468AD27E9DA2A006D11C5 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468AC27E9DA2A006D11C5 /* Area.swift */; };
+		5E5468AF27E9DAA4006D11C5 /* Employer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468AE27E9DAA4006D11C5 /* Employer.swift */; };
+		5E5468B127E9DAC2006D11C5 /* LogoUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468B027E9DAC2006D11C5 /* LogoUrls.swift */; };
+		5E5468B327E9DAE8006D11C5 /* Salary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468B227E9DAE8006D11C5 /* Salary.swift */; };
+		5E5468B527E9DB0A006D11C5 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468B427E9DB0A006D11C5 /* Schedule.swift */; };
+		5E5468B727E9DC5D006D11C5 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468B627E9DC5D006D11C5 /* Address.swift */; };
+		5E5468B927E9DC88006D11C5 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468B827E9DC88006D11C5 /* Snippet.swift */; };
+		5E5468BB27E9DD79006D11C5 /* JSONHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468BA27E9DD79006D11C5 /* JSONHelpers.swift */; };
+		5E5468BD27E9E20A006D11C5 /* DecodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468BC27E9E20A006D11C5 /* DecodingService.swift */; };
+		5E5468BF27E9E256006D11C5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468BE27E9E256006D11C5 /* NetworkService.swift */; };
+		5E5468C127E9E2B3006D11C5 /* VacanciesFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */; };
 		5E7506C027C64A7D0065BFC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */; };
 		5E7506C327C64B240065BFC0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5E7506C227C64B240065BFC0 /* FirebaseAnalytics */; };
 		5E7506C527C64B240065BFC0 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5E7506C427C64B240065BFC0 /* FirebaseAnalyticsSwift-Beta */; };
@@ -43,12 +55,24 @@
 		5E10C0A827C3BEBC00D9B5E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		5E10C0B427C3D2FD00D9B5E2 /* DecodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingService.swift; sourceTree = "<group>"; };
 		5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		5E49E5A227D0DC630006BDB6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		5E49E5A627D8AB460006BDB6 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		5E49E5A827D8B3D00006BDB6 /* VacancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyView.swift; sourceTree = "<group>"; };
+		5E5468A827E9D7C1006D11C5 /* Vacancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacancy.swift; sourceTree = "<group>"; };
+		5E5468AA27E9D806006D11C5 /* Vacancies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacancies.swift; sourceTree = "<group>"; };
+		5E5468AC27E9DA2A006D11C5 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		5E5468AE27E9DAA4006D11C5 /* Employer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employer.swift; sourceTree = "<group>"; };
+		5E5468B027E9DAC2006D11C5 /* LogoUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoUrls.swift; sourceTree = "<group>"; };
+		5E5468B227E9DAE8006D11C5 /* Salary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salary.swift; sourceTree = "<group>"; };
+		5E5468B427E9DB0A006D11C5 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		5E5468B627E9DC5D006D11C5 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		5E5468B827E9DC88006D11C5 /* Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
+		5E5468BA27E9DD79006D11C5 /* JSONHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelpers.swift; sourceTree = "<group>"; };
+		5E5468BC27E9E20A006D11C5 /* DecodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingService.swift; sourceTree = "<group>"; };
+		5E5468BE27E9E256006D11C5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesFetchService.swift; sourceTree = "<group>"; };
 		5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E7506D927CE2BCB0065BFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7506DB27CE30CB0065BFC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -95,6 +119,7 @@
 		5E10C0A027C3BEB300D9B5E2 /* IType App */ = {
 			isa = PBXGroup;
 			children = (
+				5E5468A727E9D7A3006D11C5 /* Models */,
 				5E7506D827CE2B5F0065BFC0 /* Delegates */,
 				5E10C0B327C3D2DD00D9B5E2 /* Services */,
 				5E10C0A127C3BEB300D9B5E2 /* IType_AppApp.swift */,
@@ -125,9 +150,28 @@
 		5E10C0B327C3D2DD00D9B5E2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5E10C0B427C3D2FD00D9B5E2 /* DecodingService.swift */,
+				5E5468BC27E9E20A006D11C5 /* DecodingService.swift */,
+				5E5468BE27E9E256006D11C5 /* NetworkService.swift */,
+				5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5E5468A727E9D7A3006D11C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E5468A827E9D7C1006D11C5 /* Vacancy.swift */,
+				5E5468AA27E9D806006D11C5 /* Vacancies.swift */,
+				5E5468AC27E9DA2A006D11C5 /* Area.swift */,
+				5E5468AE27E9DAA4006D11C5 /* Employer.swift */,
+				5E5468B027E9DAC2006D11C5 /* LogoUrls.swift */,
+				5E5468B227E9DAE8006D11C5 /* Salary.swift */,
+				5E5468B427E9DB0A006D11C5 /* Schedule.swift */,
+				5E5468B627E9DC5D006D11C5 /* Address.swift */,
+				5E5468B827E9DC88006D11C5 /* Snippet.swift */,
+				5E5468BA27E9DD79006D11C5 /* JSONHelpers.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5E7506D827CE2B5F0065BFC0 /* Delegates */ = {
@@ -225,16 +269,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5468B127E9DAC2006D11C5 /* LogoUrls.swift in Sources */,
 				5E10C0B227C3CD1700D9B5E2 /* ProfileView.swift in Sources */,
+				5E5468BF27E9E256006D11C5 /* NetworkService.swift in Sources */,
 				5E10C0B027C3C1D100D9B5E2 /* TabsView.swift in Sources */,
-				5E10C0B527C3D2FD00D9B5E2 /* DecodingService.swift in Sources */,
 				5E49E5A327D0DC630006BDB6 /* SettingsView.swift in Sources */,
+				5E5468BD27E9E20A006D11C5 /* DecodingService.swift in Sources */,
 				5E10C0A427C3BEB300D9B5E2 /* ContentView.swift in Sources */,
+				5E5468AB27E9D806006D11C5 /* Vacancies.swift in Sources */,
+				5E5468AF27E9DAA4006D11C5 /* Employer.swift in Sources */,
 				5E7506DA27CE2BCC0065BFC0 /* AppDelegate.swift in Sources */,
+				5E5468A927E9D7C1006D11C5 /* Vacancy.swift in Sources */,
 				5E7506DC27CE30CB0065BFC0 /* HomeView.swift in Sources */,
+				5E5468BB27E9DD79006D11C5 /* JSONHelpers.swift in Sources */,
 				5E10C0A227C3BEB300D9B5E2 /* IType_AppApp.swift in Sources */,
+				5E5468C127E9E2B3006D11C5 /* VacanciesFetchService.swift in Sources */,
+				5E5468AD27E9DA2A006D11C5 /* Area.swift in Sources */,
+				5E5468B327E9DAE8006D11C5 /* Salary.swift in Sources */,
+				5E5468B727E9DC5D006D11C5 /* Address.swift in Sources */,
+				5E5468B927E9DC88006D11C5 /* Snippet.swift in Sources */,
 				5E49E5A927D8B3D00006BDB6 /* VacancyView.swift in Sources */,
 				5E49E5A527D8A4A10006BDB6 /* FavouritesView.swift in Sources */,
+				5E5468B527E9DB0A006D11C5 /* Schedule.swift in Sources */,
 				5E10C15F27C50A6B00D9B5E2 /* SplashView.swift in Sources */,
 				5E49E5A727D8AB460006BDB6 /* SettingsCell.swift in Sources */,
 			);
