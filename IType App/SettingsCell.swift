@@ -16,6 +16,8 @@ struct SettingsCell: View {
     var body: some View {
         HStack{
             Image(systemName: imgNmae)
+                .resizable()
+                .frame(width: 30, height:30)
                 .font(.headline)
                 .foregroundColor(clr)
             
@@ -34,6 +36,6 @@ struct SettingsCell: View {
 
 struct SettingsCell_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsCell(title: "Notifications", imgNmae: "iphone.radiowaves.left.and.right", clr: Color("MainFrameColor"))
+        SettingsCell(title: "Notifications", imgNmae: "bell", clr: Color("MainFrameColor"))
     }
 }

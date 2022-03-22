@@ -53,7 +53,7 @@ struct HomeView: View {
                     }
                     .foregroundColor(Color.white)
                     .shadow(color: Color("MainFrameColor"), radius: 4)
-                    .frame(width: 360, height: 400)
+                    .frame(width: 320, height: 400)
                 }
             }
             

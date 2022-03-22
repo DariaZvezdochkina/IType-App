@@ -11,32 +11,32 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                Section {
-                    Button(action: {}) {
-                        SettingsCell(title: "Notifications", imgNmae: "iphone.radiowaves.left.and.right", clr: Color("MainFrameColor"))
-                    }
-                    Button(action: {}) {
-                        SettingsCell(title: "Profile", imgNmae: "person", clr: Color("MainFrameColor"))
-                    }
-                
-                    Button(action: {}) {
-                        SettingsCell(title: "About us", imgNmae: "message", clr: Color("MainFrameColor"))
-                    }
-                    Button(action: {}) {
-                        SettingsCell(title: "Help", imgNmae: "questionmark.circle", clr: Color("MainFrameColor"))
+            VStack {
+                List {
+                    Section {
+                        Button(action: {}) {
+                            SettingsCell(title: "Notifications", imgNmae: "bell", clr: Color("MainFrameColor"))
+                        }
+                        .foregroundColor(.black)
+                        Button(action: {}) {
+                            SettingsCell(title: "Profile", imgNmae: "person", clr: Color("MainFrameColor"))
+                        }
+                        .foregroundColor(.black)
+                    
+                        Button(action: {}) {
+                            SettingsCell(title: "About us", imgNmae: "message", clr: Color("MainFrameColor"))
+                        }
+                        .foregroundColor(.black)
+                        Button(action: {}) {
+                            SettingsCell(title: "Help", imgNmae: "questionmark.circle", clr: Color("MainFrameColor"))
+                        }
+                        .foregroundColor(.black)
+                        
                     }
                     
                 }
-                Section {
-                    Button(action: {}) {
-                        SettingsCell(title: "Log out", imgNmae: "iphone.radiowaves.left.and.right", clr: Color("MainFrameColor"))
-                    }
-                }
-                
+                .navigationTitle("Settings")
             }
-            
-            .navigationTitle("Settings")
         }
     }
 }

@@ -21,7 +21,7 @@ struct TabsView: View {
                 HomeView()
                     .tabItem {
                         Image(systemName: "house")
-                            .foregroundColor(Color("MainFrameColor"))
+                            .accentColor(.black)
                         Text("Home")
                     }
                     .tag(Route.home)

@@ -15,7 +15,7 @@ struct FavouritesView: View {
                     .resizable()
                     .frame(width: 120, height: 130)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 40, trailing: 0))
-                Text("Add vacancies \nto favourites")
+                Text("Add vacancies \nto favorites")
                     .fontWeight(.bold)
                     .font(.system(size: 34))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 25, trailing: 0))
