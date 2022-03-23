@@ -31,6 +31,9 @@
 		5E5468BD27E9E20A006D11C5 /* DecodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468BC27E9E20A006D11C5 /* DecodingService.swift */; };
 		5E5468BF27E9E256006D11C5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468BE27E9E256006D11C5 /* NetworkService.swift */; };
 		5E5468C127E9E2B3006D11C5 /* VacanciesFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */; };
+		5E5468C427E9EC8D006D11C5 /* VacancyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C327E9EC8D006D11C5 /* VacancyViewModel.swift */; };
+		5E5468C627E9EC9D006D11C5 /* VacanciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C527E9EC9D006D11C5 /* VacanciesViewModel.swift */; };
+		5E5468C827E9F2E1006D11C5 /* VacancyFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C727E9F2E1006D11C5 /* VacancyFetchService.swift */; };
 		5E7506C027C64A7D0065BFC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */; };
 		5E7506C327C64B240065BFC0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5E7506C227C64B240065BFC0 /* FirebaseAnalytics */; };
 		5E7506C527C64B240065BFC0 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5E7506C427C64B240065BFC0 /* FirebaseAnalyticsSwift-Beta */; };
@@ -72,7 +75,10 @@
 		5E5468BA27E9DD79006D11C5 /* JSONHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelpers.swift; sourceTree = "<group>"; };
 		5E5468BC27E9E20A006D11C5 /* DecodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingService.swift; sourceTree = "<group>"; };
 		5E5468BE27E9E256006D11C5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesFetchService.swift; sourceTree = "<group>"; };
+		5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = VacanciesFetchService.swift; sourceTree = "<group>"; tabWidth = 2; };
+		5E5468C327E9EC8D006D11C5 /* VacancyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyViewModel.swift; sourceTree = "<group>"; };
+		5E5468C527E9EC9D006D11C5 /* VacanciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesViewModel.swift; sourceTree = "<group>"; };
+		5E5468C727E9F2E1006D11C5 /* VacancyFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyFetchService.swift; sourceTree = "<group>"; };
 		5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E7506D927CE2BCB0065BFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7506DB27CE30CB0065BFC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -106,7 +112,9 @@
 				5E10C0A027C3BEB300D9B5E2 /* IType App */,
 				5E10C09F27C3BEB300D9B5E2 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		5E10C09F27C3BEB300D9B5E2 /* Products */ = {
 			isa = PBXGroup;
@@ -119,6 +127,7 @@
 		5E10C0A027C3BEB300D9B5E2 /* IType App */ = {
 			isa = PBXGroup;
 			children = (
+				5E5468C227E9E4D9006D11C5 /* ViewModels */,
 				5E5468A727E9D7A3006D11C5 /* Models */,
 				5E7506D827CE2B5F0065BFC0 /* Delegates */,
 				5E10C0B327C3D2DD00D9B5E2 /* Services */,
@@ -153,6 +162,7 @@
 				5E5468BC27E9E20A006D11C5 /* DecodingService.swift */,
 				5E5468BE27E9E256006D11C5 /* NetworkService.swift */,
 				5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */,
+				5E5468C727E9F2E1006D11C5 /* VacancyFetchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -172,6 +182,15 @@
 				5E5468BA27E9DD79006D11C5 /* JSONHelpers.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5E5468C227E9E4D9006D11C5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5E5468C327E9EC8D006D11C5 /* VacancyViewModel.swift */,
+				5E5468C527E9EC9D006D11C5 /* VacanciesViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		5E7506D827CE2B5F0065BFC0 /* Delegates */ = {
@@ -273,6 +292,7 @@
 				5E10C0B227C3CD1700D9B5E2 /* ProfileView.swift in Sources */,
 				5E5468BF27E9E256006D11C5 /* NetworkService.swift in Sources */,
 				5E10C0B027C3C1D100D9B5E2 /* TabsView.swift in Sources */,
+				5E5468C427E9EC8D006D11C5 /* VacancyViewModel.swift in Sources */,
 				5E49E5A327D0DC630006BDB6 /* SettingsView.swift in Sources */,
 				5E5468BD27E9E20A006D11C5 /* DecodingService.swift in Sources */,
 				5E10C0A427C3BEB300D9B5E2 /* ContentView.swift in Sources */,
@@ -282,7 +302,9 @@
 				5E5468A927E9D7C1006D11C5 /* Vacancy.swift in Sources */,
 				5E7506DC27CE30CB0065BFC0 /* HomeView.swift in Sources */,
 				5E5468BB27E9DD79006D11C5 /* JSONHelpers.swift in Sources */,
+				5E5468C627E9EC9D006D11C5 /* VacanciesViewModel.swift in Sources */,
 				5E10C0A227C3BEB300D9B5E2 /* IType_AppApp.swift in Sources */,
+				5E5468C827E9F2E1006D11C5 /* VacancyFetchService.swift in Sources */,
 				5E5468C127E9E2B3006D11C5 /* VacanciesFetchService.swift in Sources */,
 				5E5468AD27E9DA2A006D11C5 /* Area.swift in Sources */,
 				5E5468B327E9DAE8006D11C5 /* Salary.swift in Sources */,

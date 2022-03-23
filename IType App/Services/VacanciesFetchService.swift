@@ -7,33 +7,41 @@
 
 import Foundation
 
-final class VacanciesFetcherService {
-  private let url: URL
+final class VacanciesFetchService {
+  private let urlComponents: URLComponents
   private let networkService: NetworkService
   private let decodingService: DecodingService
   
-  init(url: URL = .people, networkService: NetworkService = .init(), decodingService: DecodingService = .init()) {
-    self.url = url
+  init(urlComponents: URLComponents = .vacancies, networkService: NetworkService = .init(), decodingService: DecodingService = .init()) {
+    self.urlComponents = urlComponents
     self.networkService = networkService
     self.decodingService = decodingService
   }
   
-  func fetch() async throws -> Vacancies {
-    let data = try await networkService.downloadData(with: url)
-    let people = try decodingService.decode(data: data, of: Vacancies.self)
-    return people
+    func fetch(page: Int) async throws -> Vacancies {
+      let adjustedComponents = urlComponents.addPageQueryItem(page)
+      let data = try await networkService.downloadData(with: adjustedComponents.url!)
+      let people = try decodingService.decode(data: data, of: Vacancies.self)
+      return people
   }
 }
 
-enum VacanciesFetcherServiceError: Error {
+enum VacanciesFetchServiceError: Error {
   case unknown
 }
 
-extension URL {
-  fileprivate static var people: URL {
-    guard let url = URL(string: "https://api.hh.ru/vacancies") else {
+extension URLComponents {
+  fileprivate static var vacancies: URLComponents {
+    guard let url = URLComponents(string: "https://api.hh.ru/vacancies?industry=7&per_page=5&area=113") else {
       fatalError("...")
     }
-    return url
+      return url
+  }
+  
+  fileprivate func addPageQueryItem(_ page: Int) -> URLComponents {
+    var copy  = self
+    copy.queryItems?.append(.init(name: "page", value: "\(page)"))
+    return copy
   }
 }
+
