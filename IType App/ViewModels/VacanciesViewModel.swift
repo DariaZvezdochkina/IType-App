@@ -16,14 +16,10 @@ final class VacanciesViewModel: ObservableObject {
         self.fetchingService = fetcherService
     }
     
-    @MainActor func fetchVacancies() async {
-        do {
-            let fetchedVacancies = try await fetchingService.fetch(page: currentPage)
-            currentPage += 1
-            vacanciesResult += fetchedVacancies.vacancies
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
+  @MainActor func fetchVacancies() async throws {
+    let fetchedVacancies = try await fetchingService.fetch(page: currentPage)
+    currentPage += 1
+    vacanciesResult += fetchedVacancies.vacancies
+  }
     
 }

@@ -25,6 +25,6 @@ struct DetailedVacancyView: View {
 
 struct DetailedVacancyView_Previews: PreviewProvider {
     static var previews: some View {
-      DetailedVacancyView(viewModel: .init(detailedVacancy:))
+      DetailedVacancyView(viewModel: .init(vacancyId: "53735875"))
     }
 }

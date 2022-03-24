@@ -14,9 +14,8 @@ final class DetailedVacancyViewModel: ObservableObject {
   @Published var presentedError = false
   private let detailedVacancyFetchingService: DetailedVacancyFetchService
   
-  init(vacancyId: String, detailedVacancy: DetailedVacancy, detailedVacancyFetchingService: DetailedVacancyFetchService = DetailedVacancyFetchService()) {
+  init(vacancyId: String, detailedVacancyFetchingService: DetailedVacancyFetchService = DetailedVacancyFetchService()) {
     self.vacancyId = vacancyId
-    self.detailedVacancy = detailedVacancy
     self.detailedVacancyFetchingService = detailedVacancyFetchingService
   }
   

@@ -180,8 +180,9 @@
 		5E5468A727E9D7A3006D11C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5E5468A827E9D7C1006D11C5 /* Vacancy.swift */,
 				5E5468AA27E9D806006D11C5 /* Vacancies.swift */,
+				5E5468A827E9D7C1006D11C5 /* Vacancy.swift */,
+				5E5468CB27EC6412006D11C5 /* DetailedVacancy.swift */,
 				5E5468AC27E9DA2A006D11C5 /* Area.swift */,
 				5E5468AE27E9DAA4006D11C5 /* Employer.swift */,
 				5E5468B027E9DAC2006D11C5 /* LogoUrls.swift */,
@@ -190,7 +191,6 @@
 				5E5468B627E9DC5D006D11C5 /* Address.swift */,
 				5E5468B827E9DC88006D11C5 /* Snippet.swift */,
 				5E5468BA27E9DD79006D11C5 /* JSONHelpers.swift */,
-				5E5468CB27EC6412006D11C5 /* DetailedVacancy.swift */,
 				5E5468CD27EC648E006D11C5 /* BillingType.swift */,
 				5E5468CF27EC64B1006D11C5 /* KeySkill.swift */,
 				5E5468D127EC64C8006D11C5 /* Specialization.swift */,

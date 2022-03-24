@@ -13,13 +13,12 @@ struct Vacancy: Codable, Identifiable {
     let premium: Bool
     let name: String
     let department: String?
-    let hasTest, responseLetterRequired: Bool
     let area: Area
     let salary: Salary?
     let type: Schedule
     let address: Address?
     let responseURL, sortPointDistance: JSONNull?
-    let publishedAt, createdAt: Date
+    let publishedAt, createdAt: String // Date
     let archived: Bool
     let applyAlternateURL: String
     let insiderInterview: JSONNull?
@@ -29,14 +28,13 @@ struct Vacancy: Codable, Identifiable {
     let snippet: Snippet
     let contacts: JSONNull?
     let schedule: Schedule
-    let workingDays, workingTimeIntervals, workingTimeModes: [JSONAny]
-    let acceptTemporary: Bool
 
     enum CodingKeys: String, CodingKey {
         case id, premium, name, department
-        case hasTest = "has_test"
-        case responseLetterRequired = "response_letter_required"
-        case area, salary, type, address
+        case area
+        case salary
+        case type
+        case address
         case responseURL = "response_url"
         case sortPointDistance = "sort_point_distance"
         case publishedAt = "published_at"
@@ -46,10 +44,7 @@ struct Vacancy: Codable, Identifiable {
         case insiderInterview = "insider_interview"
         case url
         case alternateURL = "alternate_url"
-        case relations, employer, snippet, contacts, schedule
-        case workingDays = "working_days"
-        case workingTimeIntervals = "working_time_intervals"
-        case workingTimeModes = "working_time_modes"
-        case acceptTemporary = "accept_temporary"
+        case relations, employer, snippet, contacts
+        case schedule
     }
 }

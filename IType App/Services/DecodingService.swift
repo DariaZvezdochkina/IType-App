@@ -15,7 +15,7 @@ final class DecodingService {
   }
   
   func decode<T>(data: Data, of _: T.Type) throws -> T where T : Decodable {
-    let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+    let decodedResponse = try decoder.decode(T.self, from: data)
     return decodedResponse
   }
 }

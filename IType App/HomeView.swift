@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
   @State private var searchText = ""
-  @State private var vacanciesViewModel = VacanciesViewModel()
+  @ObservedObject private var vacanciesViewModel = VacanciesViewModel()
   
   var body: some View {
     NavigationView {
@@ -44,19 +44,18 @@ struct HomeView: View {
           Spacer()
         }
         .padding()
-        
         .navigationTitle("Home")
         .searchable(text: $searchText, prompt: "Job title, key words")
         Spacer()
         VStack(alignment: .trailing, spacing: 30) {
-          ForEach(vacanciesViewModel.vacanciesResult) { item in
+          ForEach(vacanciesViewModel.vacanciesResult) { vacancy in
             RoundedRectangle(cornerRadius: 30)
               .overlay(
                 VStack {
-                  NavigationLink(destination: DetailedVacancyView(viewModel: .init(detailedVacancy: <#DetailedVacancy#>))) {
-                      VStack {
-                          Text(item.name)
-                      }
+                  NavigationLink(destination: DetailedVacancyView(viewModel: .init(vacancyId: vacancy.id))) {
+                    VStack {
+                      Text(vacancy.name)
+                    }
                   }
                 }
               )
@@ -66,9 +65,16 @@ struct HomeView: View {
           .frame(width: 320, height: 400)
         }
       }
-      
     }
     .padding()
+    .task {
+      do {
+        try await vacanciesViewModel.fetchVacancies()
+      } catch {
+        print(error.localizedDescription)
+        print("")
+      }
+    }
   }
 }
 

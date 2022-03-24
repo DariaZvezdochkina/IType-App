@@ -18,7 +18,8 @@ struct Vacancies: Codable {
         case vacancies = "items"
         case found, pages
         case perPage = "per_page"
-        case page, clusters, arguments
+        case page
+        case clusters, arguments
         case alternateURL = "alternate_url"
     }
 }
