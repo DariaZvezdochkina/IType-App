@@ -17,7 +17,7 @@
 		5E49E5A327D0DC630006BDB6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A227D0DC630006BDB6 /* SettingsView.swift */; };
 		5E49E5A527D8A4A10006BDB6 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */; };
 		5E49E5A727D8AB460006BDB6 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A627D8AB460006BDB6 /* SettingsCell.swift */; };
-		5E49E5A927D8B3D00006BDB6 /* VacancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A827D8B3D00006BDB6 /* VacancyView.swift */; };
+		5E49E5A927D8B3D00006BDB6 /* DetailedVacancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A827D8B3D00006BDB6 /* DetailedVacancyView.swift */; };
 		5E5468A927E9D7C1006D11C5 /* Vacancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468A827E9D7C1006D11C5 /* Vacancy.swift */; };
 		5E5468AB27E9D806006D11C5 /* Vacancies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468AA27E9D806006D11C5 /* Vacancies.swift */; };
 		5E5468AD27E9DA2A006D11C5 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468AC27E9DA2A006D11C5 /* Area.swift */; };
@@ -33,7 +33,12 @@
 		5E5468C127E9E2B3006D11C5 /* VacanciesFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */; };
 		5E5468C427E9EC8D006D11C5 /* VacancyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C327E9EC8D006D11C5 /* VacancyViewModel.swift */; };
 		5E5468C627E9EC9D006D11C5 /* VacanciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C527E9EC9D006D11C5 /* VacanciesViewModel.swift */; };
-		5E5468C827E9F2E1006D11C5 /* VacancyFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C727E9F2E1006D11C5 /* VacancyFetchService.swift */; };
+		5E5468C827E9F2E1006D11C5 /* DetailedVacancyFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C727E9F2E1006D11C5 /* DetailedVacancyFetchService.swift */; };
+		5E5468CA27EC6212006D11C5 /* DetailedVacancyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468C927EC6212006D11C5 /* DetailedVacancyViewModel.swift */; };
+		5E5468CC27EC6412006D11C5 /* DetailedVacancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468CB27EC6412006D11C5 /* DetailedVacancy.swift */; };
+		5E5468CE27EC648E006D11C5 /* BillingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468CD27EC648E006D11C5 /* BillingType.swift */; };
+		5E5468D027EC64B1006D11C5 /* KeySkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468CF27EC64B1006D11C5 /* KeySkill.swift */; };
+		5E5468D227EC64C8006D11C5 /* Specialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468D127EC64C8006D11C5 /* Specialization.swift */; };
 		5E7506C027C64A7D0065BFC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */; };
 		5E7506C327C64B240065BFC0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5E7506C227C64B240065BFC0 /* FirebaseAnalytics */; };
 		5E7506C527C64B240065BFC0 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5E7506C427C64B240065BFC0 /* FirebaseAnalyticsSwift-Beta */; };
@@ -62,7 +67,7 @@
 		5E49E5A227D0DC630006BDB6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		5E49E5A627D8AB460006BDB6 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		5E49E5A827D8B3D00006BDB6 /* VacancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyView.swift; sourceTree = "<group>"; };
+		5E49E5A827D8B3D00006BDB6 /* DetailedVacancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedVacancyView.swift; sourceTree = "<group>"; };
 		5E5468A827E9D7C1006D11C5 /* Vacancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacancy.swift; sourceTree = "<group>"; };
 		5E5468AA27E9D806006D11C5 /* Vacancies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacancies.swift; sourceTree = "<group>"; };
 		5E5468AC27E9DA2A006D11C5 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
@@ -78,7 +83,12 @@
 		5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = VacanciesFetchService.swift; sourceTree = "<group>"; tabWidth = 2; };
 		5E5468C327E9EC8D006D11C5 /* VacancyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyViewModel.swift; sourceTree = "<group>"; };
 		5E5468C527E9EC9D006D11C5 /* VacanciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesViewModel.swift; sourceTree = "<group>"; };
-		5E5468C727E9F2E1006D11C5 /* VacancyFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyFetchService.swift; sourceTree = "<group>"; };
+		5E5468C727E9F2E1006D11C5 /* DetailedVacancyFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedVacancyFetchService.swift; sourceTree = "<group>"; };
+		5E5468C927EC6212006D11C5 /* DetailedVacancyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedVacancyViewModel.swift; sourceTree = "<group>"; };
+		5E5468CB27EC6412006D11C5 /* DetailedVacancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedVacancy.swift; sourceTree = "<group>"; };
+		5E5468CD27EC648E006D11C5 /* BillingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingType.swift; sourceTree = "<group>"; };
+		5E5468CF27EC64B1006D11C5 /* KeySkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySkill.swift; sourceTree = "<group>"; };
+		5E5468D127EC64C8006D11C5 /* Specialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specialization.swift; sourceTree = "<group>"; };
 		5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E7506D927CE2BCB0065BFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7506DB27CE30CB0065BFC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -134,7 +144,7 @@
 				5E10C0A127C3BEB300D9B5E2 /* IType_AppApp.swift */,
 				5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */,
 				5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */,
-				5E49E5A827D8B3D00006BDB6 /* VacancyView.swift */,
+				5E49E5A827D8B3D00006BDB6 /* DetailedVacancyView.swift */,
 				5E7506DB27CE30CB0065BFC0 /* HomeView.swift */,
 				5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */,
 				5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */,
@@ -162,7 +172,7 @@
 				5E5468BC27E9E20A006D11C5 /* DecodingService.swift */,
 				5E5468BE27E9E256006D11C5 /* NetworkService.swift */,
 				5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */,
-				5E5468C727E9F2E1006D11C5 /* VacancyFetchService.swift */,
+				5E5468C727E9F2E1006D11C5 /* DetailedVacancyFetchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -180,6 +190,10 @@
 				5E5468B627E9DC5D006D11C5 /* Address.swift */,
 				5E5468B827E9DC88006D11C5 /* Snippet.swift */,
 				5E5468BA27E9DD79006D11C5 /* JSONHelpers.swift */,
+				5E5468CB27EC6412006D11C5 /* DetailedVacancy.swift */,
+				5E5468CD27EC648E006D11C5 /* BillingType.swift */,
+				5E5468CF27EC64B1006D11C5 /* KeySkill.swift */,
+				5E5468D127EC64C8006D11C5 /* Specialization.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				5E5468C327E9EC8D006D11C5 /* VacancyViewModel.swift */,
+				5E5468C927EC6212006D11C5 /* DetailedVacancyViewModel.swift */,
 				5E5468C527E9EC9D006D11C5 /* VacanciesViewModel.swift */,
 			);
 			path = ViewModels;
@@ -291,26 +306,31 @@
 				5E5468B127E9DAC2006D11C5 /* LogoUrls.swift in Sources */,
 				5E10C0B227C3CD1700D9B5E2 /* ProfileView.swift in Sources */,
 				5E5468BF27E9E256006D11C5 /* NetworkService.swift in Sources */,
+				5E5468CC27EC6412006D11C5 /* DetailedVacancy.swift in Sources */,
 				5E10C0B027C3C1D100D9B5E2 /* TabsView.swift in Sources */,
 				5E5468C427E9EC8D006D11C5 /* VacancyViewModel.swift in Sources */,
 				5E49E5A327D0DC630006BDB6 /* SettingsView.swift in Sources */,
+				5E5468CE27EC648E006D11C5 /* BillingType.swift in Sources */,
 				5E5468BD27E9E20A006D11C5 /* DecodingService.swift in Sources */,
 				5E10C0A427C3BEB300D9B5E2 /* ContentView.swift in Sources */,
 				5E5468AB27E9D806006D11C5 /* Vacancies.swift in Sources */,
 				5E5468AF27E9DAA4006D11C5 /* Employer.swift in Sources */,
+				5E5468CA27EC6212006D11C5 /* DetailedVacancyViewModel.swift in Sources */,
 				5E7506DA27CE2BCC0065BFC0 /* AppDelegate.swift in Sources */,
+				5E5468D227EC64C8006D11C5 /* Specialization.swift in Sources */,
 				5E5468A927E9D7C1006D11C5 /* Vacancy.swift in Sources */,
 				5E7506DC27CE30CB0065BFC0 /* HomeView.swift in Sources */,
 				5E5468BB27E9DD79006D11C5 /* JSONHelpers.swift in Sources */,
 				5E5468C627E9EC9D006D11C5 /* VacanciesViewModel.swift in Sources */,
+				5E5468D027EC64B1006D11C5 /* KeySkill.swift in Sources */,
 				5E10C0A227C3BEB300D9B5E2 /* IType_AppApp.swift in Sources */,
-				5E5468C827E9F2E1006D11C5 /* VacancyFetchService.swift in Sources */,
+				5E5468C827E9F2E1006D11C5 /* DetailedVacancyFetchService.swift in Sources */,
 				5E5468C127E9E2B3006D11C5 /* VacanciesFetchService.swift in Sources */,
 				5E5468AD27E9DA2A006D11C5 /* Area.swift in Sources */,
 				5E5468B327E9DAE8006D11C5 /* Salary.swift in Sources */,
 				5E5468B727E9DC5D006D11C5 /* Address.swift in Sources */,
 				5E5468B927E9DC88006D11C5 /* Snippet.swift in Sources */,
-				5E49E5A927D8B3D00006BDB6 /* VacancyView.swift in Sources */,
+				5E49E5A927D8B3D00006BDB6 /* DetailedVacancyView.swift in Sources */,
 				5E49E5A527D8A4A10006BDB6 /* FavouritesView.swift in Sources */,
 				5E5468B527E9DB0A006D11C5 /* Schedule.swift in Sources */,
 				5E10C15F27C50A6B00D9B5E2 /* SplashView.swift in Sources */,

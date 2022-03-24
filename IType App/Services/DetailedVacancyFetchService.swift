@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class VacancyFetchService {
+final class DetailedVacancyFetchService {
   private let url: URL
   private let networkService: NetworkService
   private let decodingService: DecodingService
@@ -18,15 +18,15 @@ final class VacancyFetchService {
     self.decodingService = decodingService
   }
   
-  func fetchVacancy(id: String) async throws -> Vacancy {
+  func fetchVacancy(id: String) async throws -> DetailedVacancy {
     let adjustedUrl = url.appendingPathComponent("\(id)")
     let data = try await networkService.downloadData(with: adjustedUrl)
-    let vacancy = try decodingService.decode(data: data, of: Vacancy.self)
-    return vacancy
+    let detailedVacancy = try decodingService.decode(data: data, of: DetailedVacancy.self)
+    return detailedVacancy
   }
 }
 
-enum VacancyFetcherServiceError: Error {
+enum DetailedVacancyFetcherServiceError: Error {
   case unknown
 }
 

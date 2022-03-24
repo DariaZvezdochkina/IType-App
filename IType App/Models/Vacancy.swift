@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Vacancy
-struct Vacancy: Codable {
+struct Vacancy: Codable, Identifiable {
     let id: String
     let premium: Bool
     let name: String

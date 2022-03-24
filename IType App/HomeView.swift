@@ -49,8 +49,17 @@ struct HomeView: View {
         .searchable(text: $searchText, prompt: "Job title, key words")
         Spacer()
         VStack(alignment: .trailing, spacing: 30) {
-          ForEach(0..<3) { item in
+          ForEach(vacanciesViewModel.vacanciesResult) { item in
             RoundedRectangle(cornerRadius: 30)
+              .overlay(
+                VStack {
+                  NavigationLink(destination: DetailedVacancyView(viewModel: .init(detailedVacancy: <#DetailedVacancy#>))) {
+                      VStack {
+                          Text(item.name)
+                      }
+                  }
+                }
+              )
           }
           .foregroundColor(Color.white)
           .shadow(color: Color("MainFrameColor"), radius: 4)

@@ -9,17 +9,18 @@ import Foundation
 
 final class VacancyViewModel: ObservableObject {
   private var vacancy: Vacancy
+  @Published var detailedVacancy: DetailedVacancy?
   @Published var presentedError = false
-  private let vacancyFetchingService: VacancyFetchService
+  private let detailedVacancyFetchingService: DetailedVacancyFetchService
   
-  init(vacancy: Vacancy, vacancyFetchingService: VacancyFetchService = VacancyFetchService()) {
+  init(vacancy: Vacancy, detailedVacancyFetchingService: DetailedVacancyFetchService = DetailedVacancyFetchService()) {
     self.vacancy = vacancy
-    self.vacancyFetchingService = vacancyFetchingService
+    self.detailedVacancyFetchingService = detailedVacancyFetchingService
   }
   
   func fetchVacancy() async {
     do {
-      vacancy = try await vacancyFetchingService.fetchVacancy(id: vacancy.id)
+      detailedVacancy = try await detailedVacancyFetchingService.fetchVacancy(id: vacancy.id)
     } catch {
       print(error.localizedDescription)
     }
