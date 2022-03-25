@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Specialization
-struct Specialization: Codable {
+struct Specialization: Codable, Identifiable {
     let id, name, profareaID, profareaName: String
 
     enum CodingKeys: String, CodingKey {

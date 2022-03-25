@@ -8,6 +8,7 @@
 import Foundation
 
 // MARK: - KeySkill
-struct KeySkill: Codable {
-    let name: String
+struct KeySkill: Codable, Identifiable {
+  let id = UUID()
+  let name: String
 }

@@ -42,7 +42,6 @@
 		5E58CB7927EDE8B80074CF5E /* HomeSmallCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58CB7827EDE8B80074CF5E /* HomeSmallCard.swift */; };
 		5E58CB7B27EDE9890074CF5E /* HomeSmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */; };
 		5E7506C027C64A7D0065BFC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */; };
-		5E7506DA27CE2BCC0065BFC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7506D927CE2BCB0065BFC0 /* AppDelegate.swift */; };
 		5E7506DC27CE30CB0065BFC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7506DB27CE30CB0065BFC0 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +82,6 @@
 		5E58CB7827EDE8B80074CF5E /* HomeSmallCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSmallCard.swift; sourceTree = "<group>"; };
 		5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSmallCardView.swift; sourceTree = "<group>"; };
 		5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5E7506D927CE2BCB0065BFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7506DB27CE30CB0065BFC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,7 +119,6 @@
 			children = (
 				5E5468C227E9E4D9006D11C5 /* ViewModels */,
 				5E5468A727E9D7A3006D11C5 /* Models */,
-				5E7506D827CE2B5F0065BFC0 /* Delegates */,
 				5E10C0B327C3D2DD00D9B5E2 /* Services */,
 				5E10C0A127C3BEB300D9B5E2 /* IType_AppApp.swift */,
 				5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */,
@@ -190,14 +187,6 @@
 				5E5468C527E9EC9D006D11C5 /* VacanciesViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		5E7506D827CE2B5F0065BFC0 /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				5E7506D927CE2BCB0065BFC0 /* AppDelegate.swift */,
-			);
-			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +277,6 @@
 				5E5468AB27E9D806006D11C5 /* Vacancies.swift in Sources */,
 				5E5468AF27E9DAA4006D11C5 /* Employer.swift in Sources */,
 				5E5468CA27EC6212006D11C5 /* DetailedVacancyViewModel.swift in Sources */,
-				5E7506DA27CE2BCC0065BFC0 /* AppDelegate.swift in Sources */,
 				5E5468D227EC64C8006D11C5 /* Specialization.swift in Sources */,
 				5E5468A927E9D7C1006D11C5 /* Vacancy.swift in Sources */,
 				5E7506DC27CE30CB0065BFC0 /* HomeView.swift in Sources */,

@@ -20,7 +20,7 @@ struct HomeView: View {
     NavigationView {
       ScrollView {
         ScrollView(.horizontal, showsIndicators: false) {
-          HStack(spacing: 15) {
+          HStack(spacing: 13) {
             ForEach(homeSmallCards) { card in
               GeometryReader { geometry in
                 HomeSmallCardView(card: card)
@@ -33,7 +33,6 @@ struct HomeView: View {
                     anchorZ: 0.0,
                     perspective: 1.0
                   )
-                
               }
               .frame(width: 150, height: 150)
             }
