@@ -39,6 +39,8 @@
 		5E5468CE27EC648E006D11C5 /* BillingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468CD27EC648E006D11C5 /* BillingType.swift */; };
 		5E5468D027EC64B1006D11C5 /* KeySkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468CF27EC64B1006D11C5 /* KeySkill.swift */; };
 		5E5468D227EC64C8006D11C5 /* Specialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5468D127EC64C8006D11C5 /* Specialization.swift */; };
+		5E58CB7927EDE8B80074CF5E /* HomeSmallCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58CB7827EDE8B80074CF5E /* HomeSmallCard.swift */; };
+		5E58CB7B27EDE9890074CF5E /* HomeSmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */; };
 		5E7506C027C64A7D0065BFC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */; };
 		5E7506C327C64B240065BFC0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5E7506C227C64B240065BFC0 /* FirebaseAnalytics */; };
 		5E7506C527C64B240065BFC0 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5E7506C427C64B240065BFC0 /* FirebaseAnalyticsSwift-Beta */; };
@@ -89,6 +91,8 @@
 		5E5468CD27EC648E006D11C5 /* BillingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingType.swift; sourceTree = "<group>"; };
 		5E5468CF27EC64B1006D11C5 /* KeySkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySkill.swift; sourceTree = "<group>"; };
 		5E5468D127EC64C8006D11C5 /* Specialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specialization.swift; sourceTree = "<group>"; };
+		5E58CB7827EDE8B80074CF5E /* HomeSmallCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSmallCard.swift; sourceTree = "<group>"; };
+		5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSmallCardView.swift; sourceTree = "<group>"; };
 		5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E7506D927CE2BCB0065BFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7506DB27CE30CB0065BFC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */,
 				5E10C0A527C3BEBC00D9B5E2 /* Assets.xcassets */,
 				5E10C0A727C3BEBC00D9B5E2 /* Preview Content */,
+				5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */,
 			);
 			path = "IType App";
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				5E5468CD27EC648E006D11C5 /* BillingType.swift */,
 				5E5468CF27EC64B1006D11C5 /* KeySkill.swift */,
 				5E5468D127EC64C8006D11C5 /* Specialization.swift */,
+				5E58CB7827EDE8B80074CF5E /* HomeSmallCard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 				5E5468C627E9EC9D006D11C5 /* VacanciesViewModel.swift in Sources */,
 				5E5468D027EC64B1006D11C5 /* KeySkill.swift in Sources */,
 				5E10C0A227C3BEB300D9B5E2 /* IType_AppApp.swift in Sources */,
+				5E58CB7927EDE8B80074CF5E /* HomeSmallCard.swift in Sources */,
 				5E5468C827E9F2E1006D11C5 /* DetailedVacancyFetchService.swift in Sources */,
 				5E5468C127E9E2B3006D11C5 /* VacanciesFetchService.swift in Sources */,
 				5E5468AD27E9DA2A006D11C5 /* Area.swift in Sources */,
@@ -331,6 +338,7 @@
 				5E5468B727E9DC5D006D11C5 /* Address.swift in Sources */,
 				5E5468B927E9DC88006D11C5 /* Snippet.swift in Sources */,
 				5E49E5A927D8B3D00006BDB6 /* DetailedVacancyView.swift in Sources */,
+				5E58CB7B27EDE9890074CF5E /* HomeSmallCardView.swift in Sources */,
 				5E49E5A527D8A4A10006BDB6 /* FavouritesView.swift in Sources */,
 				5E5468B527E9DB0A006D11C5 /* Schedule.swift in Sources */,
 				5E10C15F27C50A6B00D9B5E2 /* SplashView.swift in Sources */,

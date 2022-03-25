@@ -10,30 +10,20 @@ import SwiftUI
 struct HomeView: View {
   @State private var searchText = ""
   @ObservedObject private var vacanciesViewModel = VacanciesViewModel()
+  @State var homeSmallCards = [
+    HomeSmallCard(image: Image("createResume"), title: "Create your first Resume"),
+    HomeSmallCard(image: Image("jobsNear"), title: "Jobs Near You"),
+    HomeSmallCard(image: Image("news"), title: "News")
+  ]
   
   var body: some View {
     NavigationView {
       ScrollView {
         ScrollView(.horizontal, showsIndicators: false) {
           HStack(spacing: 15) {
-            ForEach(0 ..< 5) { item in
+            ForEach(homeSmallCards.indices) { index in
               GeometryReader { geometry in
-                RoundedRectangle(cornerRadius: 30)
-                  .shadow(color: Color("MainFrameColor"), radius: 4)
-                  .overlay(
-                    VStack {
-                      Image("createResume")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 60, height: 60)
-                        .clipped()
-                      Text("Create your first Resume")
-                        .font(.headline)
-                    }
-                      .foregroundColor(.black)
-                  )
-                  .foregroundColor(Color.white)
-                  
+                HomeSmallCardView(card: self.homeSmallCards[index])
                   .rotation3DEffect(
                     Angle(
                       degrees: Double((geometry.frame(in: .global).minX - 20) / -20)
@@ -43,6 +33,7 @@ struct HomeView: View {
                     anchorZ: 0.0,
                     perspective: 1.0
                   )
+                
               }
               .frame(width: 150, height: 150)
             }
@@ -84,14 +75,14 @@ struct HomeView: View {
                         .padding()
                       if let salary = vacancy.salary {
                         Text(salary.description)
-                  
+                        
                           .font(.headline)
                           .fontWeight(.bold)
                           .frame(maxWidth: .infinity, alignment: .trailing)
                           .padding(.trailing, 16)
                           .padding(.bottom, 15)
                       }
-                    
+                      
                     }
                     .foregroundColor(.black)
                   }
