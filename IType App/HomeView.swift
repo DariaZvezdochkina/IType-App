@@ -22,7 +22,13 @@ struct HomeView: View {
                   .shadow(color: Color("MainFrameColor"), radius: 4)
                   .overlay(
                     VStack {
+                      Image("createResume")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 60, height: 60)
+                        .clipped()
                       Text("Create your first Resume")
+                        .font(.headline)
                     }
                       .foregroundColor(.black)
                   )
