@@ -10,6 +10,6 @@ import SwiftUI
 
 struct HomeSmallCard : Identifiable {
   var id = UUID()
-  var image: Image
+  var imageName: String
   var title : String
 }

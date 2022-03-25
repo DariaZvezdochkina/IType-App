@@ -128,6 +128,7 @@
 				5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */,
 				5E49E5A827D8B3D00006BDB6 /* DetailedVacancyView.swift */,
 				5E7506DB27CE30CB0065BFC0 /* HomeView.swift */,
+				5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */,
 				5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */,
 				5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */,
 				5E49E5A227D0DC630006BDB6 /* SettingsView.swift */,
@@ -136,7 +137,6 @@
 				5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */,
 				5E10C0A527C3BEBC00D9B5E2 /* Assets.xcassets */,
 				5E10C0A727C3BEBC00D9B5E2 /* Preview Content */,
-				5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */,
 			);
 			path = "IType App";
 			sourceTree = "<group>";

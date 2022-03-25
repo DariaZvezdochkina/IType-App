@@ -15,7 +15,7 @@ struct HomeSmallCardView: View {
       .overlay(
         VStack(alignment: .leading) {
           
-          Image("\(card.image)")
+          Image("\(card.imageName)")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 60, height: 60)

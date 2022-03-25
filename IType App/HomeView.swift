@@ -11,9 +11,9 @@ struct HomeView: View {
   @State private var searchText = ""
   @ObservedObject private var vacanciesViewModel = VacanciesViewModel()
   @State var homeSmallCards = [
-    HomeSmallCard(image: Image("createResume"), title: "Create your first Resume"),
-    HomeSmallCard(image: Image("jobsNear"), title: "Jobs Near You"),
-    HomeSmallCard(image: Image("news"), title: "News")
+    HomeSmallCard(imageName: "createResume", title: "Create your first Resume"),
+    HomeSmallCard(imageName: "jobsNear", title: "Jobs Near You"),
+    HomeSmallCard(imageName: "news", title: "News")
   ]
   
   var body: some View {
@@ -21,9 +21,9 @@ struct HomeView: View {
       ScrollView {
         ScrollView(.horizontal, showsIndicators: false) {
           HStack(spacing: 15) {
-            ForEach(homeSmallCards.indices) { index in
+            ForEach(homeSmallCards) { card in
               GeometryReader { geometry in
-                HomeSmallCardView(card: self.homeSmallCards[index])
+                HomeSmallCardView(card: card)
                   .rotation3DEffect(
                     Angle(
                       degrees: Double((geometry.frame(in: .global).minX - 20) / -20)
