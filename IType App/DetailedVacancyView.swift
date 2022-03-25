@@ -17,8 +17,17 @@ struct DetailedVacancyView: View {
     if let detailedVacancy = viewModel.detailedVacancy {
       ScrollView {
         VStack {
+          HStack {
+            Text(detailedVacancy.name)
+              .font(.title)
+              .fontWeight(.bold)
+            if let salary = detailedVacancy.salary {
+              Text(salary.description)
+            }
+          }
+          .padding()
           Text(detailedVacancy.vacanciesDescription)
-          
+            .padding()
         }
       }
     } else {
