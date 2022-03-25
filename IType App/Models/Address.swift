@@ -13,7 +13,10 @@ struct Address: Codable {
     let id: String
 
     enum CodingKeys: String, CodingKey {
-        case city, street, building
+        case city
+        case street
+        case building
+
         case id
     }
 }

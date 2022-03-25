@@ -15,7 +15,6 @@ struct Vacancy: Codable, Identifiable {
     let department: String?
     let area: Area
     let salary: Salary?
-    let type: Schedule
     let address: Address?
     let responseURL, sortPointDistance: JSONNull?
     let publishedAt, createdAt: String // Date
@@ -33,7 +32,6 @@ struct Vacancy: Codable, Identifiable {
         case id, premium, name, department
         case area
         case salary
-        case type
         case address
         case responseURL = "response_url"
         case sortPointDistance = "sort_point_distance"
@@ -48,3 +46,5 @@ struct Vacancy: Codable, Identifiable {
         case schedule
     }
 }
+
+

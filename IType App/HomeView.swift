@@ -19,8 +19,15 @@ struct HomeView: View {
             ForEach(0 ..< 5) { item in
               GeometryReader { geometry in
                 RoundedRectangle(cornerRadius: 30)
-                  .foregroundColor(Color.white)
                   .shadow(color: Color("MainFrameColor"), radius: 4)
+                  .overlay(
+                    VStack {
+                      Text("Create your first Resume")
+                    }
+                      .foregroundColor(.black)
+                  )
+                  .foregroundColor(Color.white)
+                  
                   .rotation3DEffect(
                     Angle(
                       degrees: Double((geometry.frame(in: .global).minX - 20) / -20)
@@ -50,19 +57,43 @@ struct HomeView: View {
         VStack(alignment: .trailing, spacing: 30) {
           ForEach(vacanciesViewModel.vacanciesResult) { vacancy in
             RoundedRectangle(cornerRadius: 30)
+              .shadow(color: Color("MainFrameColor"), radius: 3)
               .overlay(
                 VStack {
                   NavigationLink(destination: DetailedVacancyView(viewModel: .init(vacancyId: vacancy.id))) {
-                    VStack {
+                    VStack (spacing: 5) {
                       Text(vacancy.name)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding()
+                      
+                      Text(vacancy.area.name)
+                        .font(.headline)
+                        .fontWeight(.bold)
+                      Text(vacancy.employer.name)
+                        .font(.headline)
+                        .fontWeight(.bold)
+                      Text(vacancy.snippet.requirement)
+                        .font(.footnote)
+                        .padding()
+                      if let salary = vacancy.salary {
+                        Text(salary.description)
+                  
+                          .font(.headline)
+                          .fontWeight(.bold)
+                          .frame(maxWidth: .infinity, alignment: .trailing)
+                          .padding(.trailing, 16)
+                          .padding(.bottom, 15)
+                      }
+                    
                     }
+                    .foregroundColor(.black)
                   }
                 }
               )
           }
           .foregroundColor(Color.white)
-          .shadow(color: Color("MainFrameColor"), radius: 4)
-          .frame(width: 320, height: 400)
+          .frame(width: 320, height: 280)
         }
       }
     }

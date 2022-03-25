@@ -13,3 +13,18 @@ struct Salary: Codable {
     let currency: String
     let gross: Bool
 }
+
+extension Salary: CustomStringConvertible {
+  var description: String {
+    if let from = from, let to = to {
+      return "От \(from) до \(to) \(currency)"
+    } else if let from = from {
+      return "От \(from) \(currency)"
+    } else if let to = to {
+      return "До \(to) \(currency)"
+    } else {
+      return ""
+    }
+    
+  }
+}
