@@ -9,12 +9,13 @@ import SwiftUI
 
 struct DetailedVacancyView: View {
   @ObservedObject private var viewModel: DetailedVacancyViewModel
+  @State private var dynamicHeight: CGFloat = .zero
   
   init(viewModel: DetailedVacancyViewModel) {
     self.viewModel = viewModel
   }
   var body: some View {
-    if let detailedVacancy = viewModel.detailedVacancy {
+    if let detailedVacancy = viewModel.detailedVacancy, let description = viewModel.vacancyDescription {
       ScrollView {
         VStack (spacing: 10){
           Text(detailedVacancy.name)
@@ -39,8 +40,9 @@ struct DetailedVacancyView: View {
             .fontWeight(.bold)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, 16)
-          Text(detailedVacancy.vacanciesDescription)
-            .padding()
+          Text(description)
+            .padding(.horizontal)
+            .padding(.top)
           Text("Ключевые навыки: ")
             .font(.headline)
             .fontWeight(.bold)
@@ -61,10 +63,19 @@ struct DetailedVacancyView: View {
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 16)
           }
-//          Button(action: {}) {
-//                      Text("Start Over")
-//            }
-//          .shadow(color: Color.black, radius: 20)
+          Button(action: {}) {
+            Text("Start Over")
+              .foregroundColor(Color("MainFrameColor"))
+              .frame(maxWidth: .infinity)
+              .frame(height: 44)
+              .overlay(
+                Capsule()
+                  .stroke(Color("MainFrameColor"))
+                  .shadow(color: Color("MainFrameColor"), radius: 20)
+              )
+              .padding(.horizontal, 16)
+              .padding(.top, 8)
+          }
           }
       }
     } else {

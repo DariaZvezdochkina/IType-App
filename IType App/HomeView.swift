@@ -62,19 +62,21 @@ struct HomeView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding()
-                      
+
                       Text(vacancy.area.name)
                         .font(.headline)
                         .fontWeight(.bold)
                       Text(vacancy.employer.name)
                         .font(.headline)
                         .fontWeight(.bold)
-                      Text(vacancy.snippet.requirement)
-                        .font(.footnote)
-                        .padding()
+                      if let requirement = vacancy.snippet.requirement {
+                        Text(requirement)
+                          .font(.footnote)
+                          .padding()
+                      }
                       if let salary = vacancy.salary {
                         Text(salary.description)
-                        
+
                           .font(.headline)
                           .fontWeight(.bold)
                           .frame(maxWidth: .infinity, alignment: .trailing)
@@ -99,7 +101,6 @@ struct HomeView: View {
         try await vacanciesViewModel.fetchVacancies()
       } catch {
         print(error.localizedDescription)
-        print("")
       }
     }
   }

@@ -9,5 +9,5 @@ import Foundation
 
 // MARK: - Snippet
 struct Snippet: Codable {
-    let requirement, responsibility: String
+    let requirement, responsibility: String?
 }
