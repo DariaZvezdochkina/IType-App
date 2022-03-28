@@ -14,7 +14,7 @@
 		5E10C0B027C3C1D100D9B5E2 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */; };
 		5E10C0B227C3CD1700D9B5E2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */; };
 		5E10C15F27C50A6B00D9B5E2 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */; };
-		5E1788CC27F1B47E000DA670 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1788CB27F1B47E000DA670 /* CompanyView.swift */; };
+		5E1788CC27F1B47E000DA670 /* DetailedEmployerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1788CB27F1B47E000DA670 /* DetailedEmployerView.swift */; };
 		5E49E5A327D0DC630006BDB6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A227D0DC630006BDB6 /* SettingsView.swift */; };
 		5E49E5A527D8A4A10006BDB6 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */; };
 		5E49E5A727D8AB460006BDB6 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49E5A627D8AB460006BDB6 /* SettingsCell.swift */; };
@@ -44,6 +44,10 @@
 		5E58CB7B27EDE9890074CF5E /* HomeSmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */; };
 		5E7506C027C64A7D0065BFC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */; };
 		5E7506DC27CE30CB0065BFC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7506DB27CE30CB0065BFC0 /* HomeView.swift */; };
+		5EFB8AE027F1C46100993DCE /* DetailedEmployer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB8ADF27F1C46100993DCE /* DetailedEmployer.swift */; };
+		5EFB8AE227F1C49900993DCE /* Industry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB8AE127F1C49900993DCE /* Industry.swift */; };
+		5EFB8AE427F1C51500993DCE /* DetailedEmployerFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB8AE327F1C51500993DCE /* DetailedEmployerFetchService.swift */; };
+		5EFB8AE627F1C5B900993DCE /* DetailedEmployerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB8AE527F1C5B900993DCE /* DetailedEmployerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +59,7 @@
 		5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		5E1788CB27F1B47E000DA670 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
+		5E1788CB27F1B47E000DA670 /* DetailedEmployerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEmployerView.swift; sourceTree = "<group>"; };
 		5E49E5A227D0DC630006BDB6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		5E49E5A627D8AB460006BDB6 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
@@ -85,6 +89,10 @@
 		5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSmallCardView.swift; sourceTree = "<group>"; };
 		5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E7506DB27CE30CB0065BFC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5EFB8ADF27F1C46100993DCE /* DetailedEmployer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEmployer.swift; sourceTree = "<group>"; };
+		5EFB8AE127F1C49900993DCE /* Industry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Industry.swift; sourceTree = "<group>"; };
+		5EFB8AE327F1C51500993DCE /* DetailedEmployerFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEmployerFetchService.swift; sourceTree = "<group>"; };
+		5EFB8AE527F1C5B900993DCE /* DetailedEmployerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEmployerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 				5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */,
 				5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */,
 				5E49E5A827D8B3D00006BDB6 /* DetailedVacancyView.swift */,
+				5E1788CB27F1B47E000DA670 /* DetailedEmployerView.swift */,
 				5E7506DB27CE30CB0065BFC0 /* HomeView.swift */,
 				5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */,
 				5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */,
@@ -136,7 +145,6 @@
 				5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */,
 				5E10C0A527C3BEBC00D9B5E2 /* Assets.xcassets */,
 				5E10C0A727C3BEBC00D9B5E2 /* Preview Content */,
-				5E1788CB27F1B47E000DA670 /* CompanyView.swift */,
 			);
 			path = "IType App";
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 				5E5468BE27E9E256006D11C5 /* NetworkService.swift */,
 				5E5468C027E9E2B3006D11C5 /* VacanciesFetchService.swift */,
 				5E5468C727E9F2E1006D11C5 /* DetailedVacancyFetchService.swift */,
+				5EFB8AE327F1C51500993DCE /* DetailedEmployerFetchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +187,8 @@
 				5E5468CF27EC64B1006D11C5 /* KeySkill.swift */,
 				5E5468D127EC64C8006D11C5 /* Specialization.swift */,
 				5E58CB7827EDE8B80074CF5E /* HomeSmallCard.swift */,
+				5EFB8ADF27F1C46100993DCE /* DetailedEmployer.swift */,
+				5EFB8AE127F1C49900993DCE /* Industry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +199,7 @@
 				5E5468C327E9EC8D006D11C5 /* VacancyViewModel.swift */,
 				5E5468C927EC6212006D11C5 /* DetailedVacancyViewModel.swift */,
 				5E5468C527E9EC9D006D11C5 /* VacanciesViewModel.swift */,
+				5EFB8AE527F1C5B900993DCE /* DetailedEmployerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -283,7 +295,7 @@
 				5E5468D227EC64C8006D11C5 /* Specialization.swift in Sources */,
 				5E5468A927E9D7C1006D11C5 /* Vacancy.swift in Sources */,
 				5E7506DC27CE30CB0065BFC0 /* HomeView.swift in Sources */,
-				5E1788CC27F1B47E000DA670 /* CompanyView.swift in Sources */,
+				5E1788CC27F1B47E000DA670 /* DetailedEmployerView.swift in Sources */,
 				5E5468BB27E9DD79006D11C5 /* JSONHelpers.swift in Sources */,
 				5E5468C627E9EC9D006D11C5 /* VacanciesViewModel.swift in Sources */,
 				5E5468D027EC64B1006D11C5 /* KeySkill.swift in Sources */,
@@ -301,6 +313,10 @@
 				5E5468B527E9DB0A006D11C5 /* Schedule.swift in Sources */,
 				5E10C15F27C50A6B00D9B5E2 /* SplashView.swift in Sources */,
 				5E49E5A727D8AB460006BDB6 /* SettingsCell.swift in Sources */,
+				5EFB8AE427F1C51500993DCE /* DetailedEmployerFetchService.swift in Sources */,
+				5EFB8AE627F1C5B900993DCE /* DetailedEmployerViewModel.swift in Sources */,
+				5EFB8AE027F1C46100993DCE /* DetailedEmployer.swift in Sources */,
+				5EFB8AE227F1C49900993DCE /* Industry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

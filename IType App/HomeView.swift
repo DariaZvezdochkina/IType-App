@@ -11,9 +11,9 @@ struct HomeView: View {
   @State private var searchText = ""
   @ObservedObject private var vacanciesViewModel = VacanciesViewModel()
   @State var homeSmallCards = [
-    HomeSmallCard(imageName: "createResume", title: "Create your first Resume"),
-    HomeSmallCard(imageName: "jobsNear", title: "Jobs Near You"),
-    HomeSmallCard(imageName: "news", title: "News")
+    HomeSmallCard(imageName: "createResume", title: "Создайте резюме"),
+    HomeSmallCard(imageName: "jobsNear", title: "Работа рядом с Вами"),
+    HomeSmallCard(imageName: "news", title: "Новости")
   ]
   
   var body: some View {
@@ -40,14 +40,13 @@ struct HomeView: View {
           .padding()
         }
         VStack(alignment: .trailing) {
-          Text("Vacancies for You")
+          Text("Вакансии для Вас")
             .fontWeight(.semibold)
             .font(.title)
             .frame(maxWidth: .infinity, alignment: .leading)
           Spacer()
         }
         .padding()
-        .navigationTitle("Home")
         .searchable(text: $searchText, prompt: "Job title, key words")
         Spacer()
         VStack(spacing: 30) {

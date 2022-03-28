@@ -24,7 +24,7 @@ struct DetailedVacancyView: View {
               .fontWeight(.bold)
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 16)
-              NavigationLink(destination: CompanyView(detailedVacancy: detailedVacancy)) {
+            NavigationLink(destination: DetailedEmployerView(viewModel: .init(employerId: detailedVacancy.employer.id))) {
                 VStack {
                   HStack {
                     AsyncImage(url: URL(string: detailedVacancy.employer.logoUrls.original)) { image in
@@ -37,6 +37,7 @@ struct DetailedVacancyView: View {
                   }
                   .padding()
                   Text(detailedVacancy.employer.name)
+                    .foregroundColor(Color("MainFrameColor"))
                     .font(.headline)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -82,7 +83,7 @@ struct DetailedVacancyView: View {
             
           }
           Button(action: {}) {
-            Text("Start Over")
+            Text("Откликнуться")
               .foregroundColor(Color("MainFrameColor"))
               .frame(maxWidth: .infinity)
               .frame(height: 44)
@@ -93,6 +94,7 @@ struct DetailedVacancyView: View {
               )
               .padding(.horizontal, 16)
               .padding(.top, 8)
+              .padding(.bottom, 8)
           }
         }
         
@@ -110,8 +112,8 @@ struct DetailedVacancyView: View {
 
 struct DetailedVacancyView_Previews: PreviewProvider {
   static var previews: some View {
-    NavigationView {
+    
       DetailedVacancyView(viewModel: .init(vacancyId: "53735875"))
-    }
+    
   }
 }
