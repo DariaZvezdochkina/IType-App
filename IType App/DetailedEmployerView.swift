@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailedEmployerView: View {
   @ObservedObject private var viewModel: DetailedEmployerViewModel
   @State private var dynamicHeight: CGFloat = .zero
-
+  
   
   init(viewModel: DetailedEmployerViewModel) {
     self.viewModel = viewModel
@@ -54,6 +54,7 @@ struct DetailedEmployerView: View {
             .padding(.leading, 16)
           
           ForEach(detailedEmployer.industries) { industry in
+            
             Text(industry.name)
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 16)
@@ -79,8 +80,8 @@ struct DetailedEmployerView: View {
 
 struct DetailedEmployerView_Previews: PreviewProvider {
   static var previews: some View {
-      DetailedEmployerView(viewModel: .init(employerId: "2901591"))
-
+    DetailedEmployerView(viewModel: .init(employerId: "2901591"))
+    
     
   }
 }

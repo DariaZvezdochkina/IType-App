@@ -66,19 +66,40 @@ struct DetailedVacancyView: View {
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 16)
             ForEach(detailedVacancy.keySkills) { skill in
-              Text(skill.name)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 16)
+              HStack {
+                Image(systemName: "circle.fill")
+                  .resizable()
+                  .frame(width: 4, height: 4)
+                Spacer()
+                Text(skill.name)
+                  .frame(maxWidth: .infinity, alignment: .leading)
+                  .padding(.leading, 16)
+                  .padding(.trailing, 25)
+
+              }
+              .padding(.bottom, 10)
+              .padding(.leading, 50)
             }
             Text("Специализация: ")
               .font(.headline)
               .fontWeight(.bold)
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 16)
+              .padding(.top, 10)
+            
             ForEach(detailedVacancy.specializations) { specialization in
-              Text(specialization.name)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 16)
+              HStack {
+                Image(systemName: "circle.fill")
+                  .resizable()
+                  .frame(width: 4, height: 4)
+                Spacer()
+                Text(specialization.name)
+                  .frame(maxWidth: .infinity, alignment: .leading)
+                  .padding(.leading, 16)
+                  .padding(.trailing, 25)
+              }
+              .padding(.bottom, 10)
+              .padding(.leading, 50)
             }
             
           }
@@ -112,8 +133,10 @@ struct DetailedVacancyView: View {
 
 struct DetailedVacancyView_Previews: PreviewProvider {
   static var previews: some View {
-    
+    NavigationView {
       DetailedVacancyView(viewModel: .init(vacancyId: "53735875"))
+
+    }
     
   }
 }
