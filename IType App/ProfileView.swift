@@ -16,19 +16,19 @@ struct ProfileView: View {
                     .resizable()
                     .frame(width: 120, height: 130)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 40, trailing: 0))
-                Text("Создайте своё \nрезюме")
+                Text(LocalizedStringKey("profileView.createResumePhrase"))
                     .fontWeight(.bold)
                     .font(.system(size: 34))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 25, trailing: 0))
                     .multilineTextAlignment(.center)
-                Text("Заполните информацию о себе \nи своих навыках. Это поможет \nсотруднику быстрее найти вас!")
+                Text(LocalizedStringKey("profileView.fillInfo"))
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 70, trailing: 0))
                 Button(action: {
                     print("Create tapped!")
                 }) {
                     HStack {
-                        Text("Создать")
+                        Text(LocalizedStringKey("profileView.createButton"))
                             .fontWeight(.bold)
                             .font(.title)
                     }
@@ -40,7 +40,7 @@ struct ProfileView: View {
                     .shadow(color: Color("MainFrameColor"), radius: 5)
                 }
             }
-            .navigationTitle("Профиль")
+            .navigationTitle(LocalizedStringKey("profileView.navigationTitle"))
         }
         .padding()
     }
@@ -49,5 +49,6 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         TabsView(route: .profile)
+//        .environment(\.locale, .init(identifier: "ru"))
     }
 }
