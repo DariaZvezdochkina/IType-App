@@ -15,28 +15,28 @@ struct SettingsView: View {
                 List {
                     Section {
                         Button(action: {}) {
-                            SettingsCell(title: "Notifications", imgNmae: "bell", clr: Color("MainFrameColor"))
+                            SettingsCell(title: "Уведомления", imgNmae: "bell", clr: Color("MainFrameColor"))
                         }
                         .foregroundColor(.black)
                         
                         Button(action: {}) {
-                            SettingsCell(title: "Profile", imgNmae: "person", clr: Color("MainFrameColor"))
+                            SettingsCell(title: "Профиль", imgNmae: "person", clr: Color("MainFrameColor"))
                         }
                         .foregroundColor(.black)
                     
                         Button(action: {}) {
-                            SettingsCell(title: "About us", imgNmae: "message", clr: Color("MainFrameColor"))
+                            SettingsCell(title: "О нас", imgNmae: "message", clr: Color("MainFrameColor"))
                         }
                         .foregroundColor(.black)
                         Button(action: {}) {
-                            SettingsCell(title: "Help", imgNmae: "questionmark.circle", clr: Color("MainFrameColor"))
+                            SettingsCell(title: "Помощь", imgNmae: "questionmark.circle", clr: Color("MainFrameColor"))
                         }
                         .foregroundColor(.black)
                         
                     }
                     
                 }
-                .navigationTitle("Settings")
+                .navigationTitle("Настройки")
             }
         }
     }

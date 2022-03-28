@@ -22,7 +22,7 @@ struct TabsView: View {
                     .tabItem {
                         Image(systemName: "house")
                             .accentColor(.black)
-                        Text("Home")
+                        Text("Домой")
                     }
                     .tag(Route.home)
                 
@@ -30,7 +30,7 @@ struct TabsView: View {
                     .tabItem {
                         Image(systemName: "person")
                             .foregroundColor(Color("MainFrameColor"))
-                        Text("Profile")
+                        Text("Профиль")
                     }
                     .tag(Route.profile)
                 
@@ -38,7 +38,7 @@ struct TabsView: View {
                     .tabItem {
                         Image(systemName: "heart")
                             .foregroundColor(Color("MainFrameColor"))
-                        Text("Favourites")
+                        Text("Избранное")
                     }
                     .tag(Route.favourites)
                 
@@ -47,7 +47,7 @@ struct TabsView: View {
                     .tabItem {
                         Image(systemName: "gear")
                             .foregroundColor(Color("MainFrameColor"))
-                        Text("Settings")
+                        Text("Настройки")
                     }
                     .tag(Route.settings)
             }

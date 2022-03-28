@@ -16,19 +16,19 @@ struct ProfileView: View {
                     .resizable()
                     .frame(width: 120, height: 130)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 40, trailing: 0))
-                Text("Create your \nresume")
+                Text("Создайте своё \nрезюме")
                     .fontWeight(.bold)
                     .font(.system(size: 34))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 25, trailing: 0))
                     .multilineTextAlignment(.center)
-                Text("Fill information about yourself \nand your skills. It will help \nthe employee find you faster!")
+                Text("Заполните информацию о себе \nи своих навыках. Это поможет \nсотруднику быстрее найти вас!")
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 70, trailing: 0))
                 Button(action: {
                     print("Create tapped!")
                 }) {
                     HStack {
-                        Text("Create")
+                        Text("Создать")
                             .fontWeight(.bold)
                             .font(.title)
                     }
@@ -40,7 +40,7 @@ struct ProfileView: View {
                     .shadow(color: Color("MainFrameColor"), radius: 5)
                 }
             }
-            .navigationTitle("Profile")
+            .navigationTitle("Профиль")
         }
         .padding()
     }

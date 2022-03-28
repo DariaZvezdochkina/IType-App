@@ -47,7 +47,7 @@ struct HomeView: View {
           Spacer()
         }
         .padding()
-        .searchable(text: $searchText, prompt: "Job title, key words")
+        .searchable(text: $searchText, prompt: "Должность, ключевые слова")
         Spacer()
         VStack(spacing: 30) {
           ForEach(vacanciesViewModel.vacanciesResult) { vacancy in

@@ -44,6 +44,8 @@
 		5E58CB7B27EDE9890074CF5E /* HomeSmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */; };
 		5E7506C027C64A7D0065BFC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */; };
 		5E7506DC27CE30CB0065BFC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7506DB27CE30CB0065BFC0 /* HomeView.swift */; };
+		5E94CD7227F1EEC100C7528F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E94CD7027F1EEC100C7528F /* Localizable.strings */; };
+		5E94CD7527F1EEDC00C7528F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E94CD7327F1EEDC00C7528F /* Localizable.strings */; };
 		5EFB8AE027F1C46100993DCE /* DetailedEmployer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB8ADF27F1C46100993DCE /* DetailedEmployer.swift */; };
 		5EFB8AE227F1C49900993DCE /* Industry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB8AE127F1C49900993DCE /* Industry.swift */; };
 		5EFB8AE427F1C51500993DCE /* DetailedEmployerFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB8AE327F1C51500993DCE /* DetailedEmployerFetchService.swift */; };
@@ -89,6 +91,8 @@
 		5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSmallCardView.swift; sourceTree = "<group>"; };
 		5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E7506DB27CE30CB0065BFC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5E94CD7127F1EEC100C7528F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
+		5E94CD7427F1EEDC00C7528F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		5EFB8ADF27F1C46100993DCE /* DetailedEmployer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEmployer.swift; sourceTree = "<group>"; };
 		5EFB8AE127F1C49900993DCE /* Industry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Industry.swift; sourceTree = "<group>"; };
 		5EFB8AE327F1C51500993DCE /* DetailedEmployerFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEmployerFetchService.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		5E10C0A027C3BEB300D9B5E2 /* IType App */ = {
 			isa = PBXGroup;
 			children = (
+				5E94CD6D27F1EE6E00C7528F /* Localization */,
 				5E5468C227E9E4D9006D11C5 /* ViewModels */,
 				5E5468A727E9D7A3006D11C5 /* Models */,
 				5E10C0B327C3D2DD00D9B5E2 /* Services */,
@@ -204,6 +209,31 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		5E94CD6D27F1EE6E00C7528F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				5E94CD6F27F1EE9600C7528F /* ru.lproj */,
+				5E94CD6E27F1EE8600C7528F /* en.lproj */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		5E94CD6E27F1EE8600C7528F /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				5E94CD7327F1EEDC00C7528F /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		5E94CD6F27F1EE9600C7528F /* ru.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				5E94CD7027F1EEC100C7528F /* Localizable.strings */,
+			);
+			path = ru.lproj;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,7 +297,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E94CD7527F1EEDC00C7528F /* Localizable.strings in Resources */,
 				5E10C0A927C3BEBC00D9B5E2 /* Preview Assets.xcassets in Resources */,
+				5E94CD7227F1EEC100C7528F /* Localizable.strings in Resources */,
 				5E10C0A627C3BEBC00D9B5E2 /* Assets.xcassets in Resources */,
 				5E7506C027C64A7D0065BFC0 /* GoogleService-Info.plist in Resources */,
 			);
@@ -322,6 +354,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5E94CD7027F1EEC100C7528F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E94CD7127F1EEC100C7528F /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		5E94CD7327F1EEDC00C7528F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E94CD7427F1EEDC00C7528F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5E10C0AA27C3BEBC00D9B5E2 /* Debug */ = {

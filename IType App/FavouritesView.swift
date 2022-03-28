@@ -15,19 +15,19 @@ struct FavouritesView: View {
                     .resizable()
                     .frame(width: 120, height: 130)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 40, trailing: 0))
-                Text("Add vacancies \nto favorites")
+                Text("Добавьте вакансии \nв избранное")
                     .fontWeight(.bold)
                     .font(.system(size: 34))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 25, trailing: 0))
                     .multilineTextAlignment(.center)
-                Text("You can also add to the list \nby clicking on the Heart \nicon on the main page.")
+                Text("Вы также можете пополнить список, \nнажав на значок \"Сердце\" \nна главной странице.")
                     .multilineTextAlignment(.center)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 70, trailing: 0))
                 Button(action: {
                     print("Create tapped!")
                 }) {
                     HStack {
-                        Text("Search vacancies")
+                        Text("Найти вакансии")
                             .fontWeight(.bold)
                             .font(.title)
                     }
@@ -40,7 +40,7 @@ struct FavouritesView: View {
                 }
                 
             }
-            .navigationTitle("Favourites")
+            .navigationTitle("Избранное")
         }
         .padding()
     }
