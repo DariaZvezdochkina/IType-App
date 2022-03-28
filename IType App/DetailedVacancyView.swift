@@ -17,51 +17,69 @@ struct DetailedVacancyView: View {
   var body: some View {
     if let detailedVacancy = viewModel.detailedVacancy, let description = viewModel.vacancyDescription {
       ScrollView {
-        VStack (spacing: 10){
-          Text(detailedVacancy.name)
-            .font(.title)
-            .fontWeight(.bold)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 16)
-          Text(detailedVacancy.employer.name)
-            .font(.headline)
-            .fontWeight(.bold)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 16)
-          if let salary = detailedVacancy.salary {
-            Text(salary.description)
+        Group {
+          VStack (spacing: 10){
+            Text(detailedVacancy.name)
+              .font(.title)
+              .fontWeight(.bold)
+              .frame(maxWidth: .infinity, alignment: .leading)
+              .padding(.leading, 16)
+              NavigationLink(destination: CompanyView(detailedVacancy: detailedVacancy)) {
+                VStack {
+                  HStack {
+                    AsyncImage(url: URL(string: detailedVacancy.employer.logoUrls.original)) { image in
+                      image.resizable()
+                    } placeholder: {
+                      ProgressView()
+                    }
+                    .frame(width: 100, height: 100, alignment: .leading)
+                    Spacer()
+                  }
+                  .padding()
+                  Text(detailedVacancy.employer.name)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 16)
+                }
+              }
+            
+            if let salary = detailedVacancy.salary {
+              Text(salary.description)
+                .font(.headline)
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 16)
+            }
+            Text("Опыт работы: \(detailedVacancy.experience.name)")
               .font(.headline)
               .fontWeight(.bold)
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 16)
-          }
-          Text("Опыт работы: \(detailedVacancy.experience.name)")
-            .font(.headline)
-            .fontWeight(.bold)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 16)
-          Text(description)
-            .padding(.horizontal)
-            .padding(.top)
-          Text("Ключевые навыки: ")
-            .font(.headline)
-            .fontWeight(.bold)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 16)
-          ForEach(detailedVacancy.keySkills) { skill in
-            Text(skill.name)
+            Text(description)
+              .padding(.horizontal)
+              .padding(.top)
+            Text("Ключевые навыки: ")
+              .font(.headline)
+              .fontWeight(.bold)
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 16)
-          }
-          Text("Специализация: ")
-            .font(.headline)
-            .fontWeight(.bold)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 16)
-          ForEach(detailedVacancy.specializations) { specialization in
-            Text(specialization.name)
+            ForEach(detailedVacancy.keySkills) { skill in
+              Text(skill.name)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 16)
+            }
+            Text("Специализация: ")
+              .font(.headline)
+              .fontWeight(.bold)
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 16)
+            ForEach(detailedVacancy.specializations) { specialization in
+              Text(specialization.name)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 16)
+            }
+            
           }
           Button(action: {}) {
             Text("Start Over")
@@ -76,7 +94,8 @@ struct DetailedVacancyView: View {
               .padding(.horizontal, 16)
               .padding(.top, 8)
           }
-          }
+        }
+        
       }
     } else {
       ProgressView()
@@ -91,6 +110,8 @@ struct DetailedVacancyView: View {
 
 struct DetailedVacancyView_Previews: PreviewProvider {
   static var previews: some View {
-    DetailedVacancyView(viewModel: .init(vacancyId: "53735875"))
+    NavigationView {
+      DetailedVacancyView(viewModel: .init(vacancyId: "53735875"))
+    }
   }
 }

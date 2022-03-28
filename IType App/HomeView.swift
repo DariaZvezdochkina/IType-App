@@ -50,7 +50,7 @@ struct HomeView: View {
         .navigationTitle("Home")
         .searchable(text: $searchText, prompt: "Job title, key words")
         Spacer()
-        VStack(alignment: .trailing, spacing: 30) {
+        VStack(spacing: 30) {
           ForEach(vacanciesViewModel.vacanciesResult) { vacancy in
             RoundedRectangle(cornerRadius: 30)
               .shadow(color: Color("MainFrameColor"), radius: 3)
@@ -91,11 +91,11 @@ struct HomeView: View {
               )
           }
           .foregroundColor(Color.white)
-          .frame(width: 320, height: 280)
+          .frame(height: 280)
+          .padding()
         }
       }
     }
-    .padding()
     .task {
       do {
         try await vacanciesViewModel.fetchVacancies()
