@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsCell: View {
     
-    var title: String
+    var title: LocalizedStringKey
     var imgNmae: String
     var clr: Color
     

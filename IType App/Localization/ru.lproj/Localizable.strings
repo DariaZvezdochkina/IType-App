@@ -2,3 +2,22 @@
 "profileView.createResumePhrase" = "Создайте своё \nрезюме";
 "profileView.fillInfo" = "Заполните информацию о себе \nи своих навыках. Это поможет \nработодателю быстрее найти вас!";
 "profileView.createButton" = "Создать";
+
+"settingsView.navigationTitle" = "Настройки";
+"settingsView.notifications" = "Уведомления";
+"settingsView.profile" = "Профиль";
+"settingsView.aboutUs" = "О нас";
+"settingsView.help" = "Помощь";
+
+"favoritesView.navigationTitle" = "Избранное";
+"favoritesView.addVacanciesPhrase" = "Добавьте вакансии \nв избранное";
+"favoritesView.addToTheListPhrase" = "Вы также можете пополнить список, \nнажав на значок \"Сердце\" \nна главной странице.";
+"favoritesView.searchButton" = "Найти вакансии";
+
+"homeView.createResumeCard" = "Создайте резюме";
+"homeView.jobsNearCard" = "Работа рядом с Вами";
+"homeView.newsCard" = "Новости";
+"homeView.vacanciesForYou" = "Вакансии для Вас";
+"homeView.searchKeyTerms" = "Должность, ключевые слова";
+
+"detailedVacancyView.respondButton" = "Откликнуться";

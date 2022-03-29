@@ -11,9 +11,9 @@ struct HomeView: View {
   @State private var searchText = ""
   @ObservedObject private var vacanciesViewModel = VacanciesViewModel()
   @State var homeSmallCards = [
-    HomeSmallCard(imageName: "createResume", title: "Создайте резюме"),
-    HomeSmallCard(imageName: "jobsNear", title: "Работа рядом с Вами"),
-    HomeSmallCard(imageName: "news", title: "Новости")
+    HomeSmallCard(imageName: "createResume", title: LocalizedStringKey("homeView.createResumeCard")),
+    HomeSmallCard(imageName: "jobsNear", title: LocalizedStringKey("homeView.jobsNearCard")),
+    HomeSmallCard(imageName: "news", title: LocalizedStringKey("homeView.newsCard"))
   ]
   
   var body: some View {
@@ -40,14 +40,14 @@ struct HomeView: View {
           .padding()
         }
         VStack(alignment: .trailing) {
-          Text("Вакансии для Вас")
+          Text(LocalizedStringKey("homeView.vacanciesForYou"))
             .fontWeight(.semibold)
             .font(.title)
             .frame(maxWidth: .infinity, alignment: .leading)
           Spacer()
         }
         .padding()
-        .searchable(text: $searchText, prompt: "Должность, ключевые слова")
+        .searchable(text: $searchText, prompt: LocalizedStringKey("homeView.searchKeyTerms"))
         Spacer()
         VStack(spacing: 30) {
           ForEach(vacanciesViewModel.vacanciesResult) { vacancy in
@@ -108,5 +108,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
     TabsView(route: .home)
+//                        .environment(\.locale, .init(identifier: "ru"))
+
   }
 }

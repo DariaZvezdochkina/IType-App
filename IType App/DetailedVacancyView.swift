@@ -104,7 +104,7 @@ struct DetailedVacancyView: View {
             
           }
           Button(action: {}) {
-            Text("Откликнуться")
+            Text(LocalizedStringKey("detailedVacancyView.respondButton"))
               .foregroundColor(Color("MainFrameColor"))
               .frame(maxWidth: .infinity)
               .frame(height: 44)
@@ -135,8 +135,8 @@ struct DetailedVacancyView_Previews: PreviewProvider {
   static var previews: some View {
     NavigationView {
       DetailedVacancyView(viewModel: .init(vacancyId: "53735875"))
-
     }
-    
+//                            .environment(\.locale, .init(identifier: "ru"))
+
   }
 }

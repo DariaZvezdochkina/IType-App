@@ -2,3 +2,22 @@
 "profileView.createResumePhrase" = "Create your \nresume";
 "profileView.fillInfo" = "Fill out information about yourself \nand your skills. This will help \nemployer find you faster!";
 "profileView.createButton" = "Create";
+
+"settingsView.navigationTitle" = "Settings";
+"settingsView.notifications" = "Notifications";
+"settingsView.profile" = "Profile";
+"settingsView.aboutUs" = "About Us";
+"settingsView.help" = "Help";
+
+"favoritesView.navigationTitle" = "Favorites";
+"favoritesView.addVacanciesPhrase" = "Add jobs \nto your favorites";
+"favoritesView.addToTheListPhrase" = "You can also add to the list \nby clicking on the \"Heart\" icon \non the home page.";
+"favoritesView.searchButton" = "Find jobs";
+
+"homeView.createResumeCard" = "Create a resume";
+"homeView.jobsNearCard" = "Jobs Near You";
+"homeView.newsCard" = "News";
+"homeView.vacanciesForYou" = "Vacancies For You";
+"homeView.searchKeyTerms" = "Job title, key words";
+
+"detailedVacancyView.respondButton" = "Respond";
