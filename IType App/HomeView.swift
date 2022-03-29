@@ -75,14 +75,18 @@ struct HomeView: View {
                       }
                       if let salary = vacancy.salary {
                         Text(salary.description)
-
                           .font(.headline)
                           .fontWeight(.bold)
                           .frame(maxWidth: .infinity, alignment: .trailing)
                           .padding(.trailing, 16)
-                          .padding(.bottom, 15)
+                          
                       }
-                      
+                      Text(vacancy.schedule.description)
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding(.trailing, 16)
+                        .padding(.bottom, 10)
                     }
                     .foregroundColor(.black)
                   }

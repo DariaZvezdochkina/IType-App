@@ -25,3 +25,9 @@ extension Schedule {
         case удаленнаяРабота = "Удаленная работа"
     }
 }
+
+extension Schedule: CustomStringConvertible {
+  var description: String {
+    name.rawValue
+  }
+}
