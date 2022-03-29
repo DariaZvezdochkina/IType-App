@@ -49,7 +49,7 @@ struct HomeView: View {
         .padding()
         .searchable(text: $searchText, prompt: LocalizedStringKey("homeView.searchKeyTerms"))
         Spacer()
-        VStack(spacing: 30) {
+        VStack(spacing: 10) {
           ForEach(vacanciesViewModel.vacanciesResult) { vacancy in
             RoundedRectangle(cornerRadius: 30)
               .shadow(color: Color("MainFrameColor"), radius: 3)
@@ -90,7 +90,7 @@ struct HomeView: View {
               )
           }
           .foregroundColor(Color.white)
-          .frame(height: 280)
+          .frame(height: 300)
           .padding()
         }
       }
