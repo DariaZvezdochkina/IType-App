@@ -15,7 +15,6 @@ struct Vacancy: Codable, Identifiable {
   let department: String?
   let area: Area
   let salary: Salary?
-  let address: Address?
   let employer: Employer
   let snippet: Snippet
   let schedule: Schedule
@@ -24,7 +23,6 @@ struct Vacancy: Codable, Identifiable {
     case id, premium, name, department
     case area
     case salary
-    case address
     case employer
     case snippet
     case schedule

@@ -39,6 +39,7 @@ struct HomeView: View {
           }
           .padding()
         }
+        .navigationBarTitleDisplayMode(.inline)
         VStack(alignment: .trailing) {
           Text(LocalizedStringKey("homeView.vacanciesForYou"))
             .fontWeight(.semibold)

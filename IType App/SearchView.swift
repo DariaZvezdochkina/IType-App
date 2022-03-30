@@ -8,8 +8,38 @@
 import SwiftUI
 
 struct SearchView: View {
+  @State private var searchText = ""
   var body: some View {
-    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    NavigationView {
+      ScrollView {
+        VStack {
+          HStack {
+            Button(action: {
+              print("button pressed")
+              
+            }) {
+              Image(systemName: "clear")
+                .renderingMode(.original)
+            }
+            Spacer()
+            Text("Search")
+              .fontWeight(.semibold)
+              .font(.title)
+              .frame(maxWidth: .infinity, alignment: .center)
+            Spacer()
+            Button(action: {
+              print("button pressed")
+              
+            }) {
+              Image(systemName: "slider.vertical.3")
+            }
+          }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .padding()
+        .searchable(text: $searchText, prompt: LocalizedStringKey("homeView.searchKeyTerms"))
+      }
+    }
   }
 }
 
