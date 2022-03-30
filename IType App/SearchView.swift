@@ -20,6 +20,8 @@ struct SearchView: View {
             }) {
               Image(systemName: "clear")
                 .renderingMode(.original)
+                .resizable()
+                .frame(width: 28, height: 28)
             }
             Spacer()
             Text("Search")
@@ -32,6 +34,9 @@ struct SearchView: View {
               
             }) {
               Image(systemName: "slider.vertical.3")
+                .resizable()
+                .frame(width: 28, height: 28)
+                .foregroundColor(Color("MainFrameColor"))
             }
           }
         }
