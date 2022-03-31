@@ -22,8 +22,8 @@ final class VacanciesFetchService {
     var adjustedComponents = urlComponents.addPageQueryItem(page)
     adjustedComponents.addQueryItems(dictionary)
     let data = try await networkService.downloadData(with: adjustedComponents.url!)
-    let people = try decodingService.decode(data: data, of: Vacancies.self)
-    return people
+    let vacancies = try decodingService.decode(data: data, of: Vacancies.self)
+    return vacancies
   }
 }
 

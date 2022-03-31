@@ -74,6 +74,7 @@ struct HomeView: View {
                           .font(.footnote)
                           .padding()
                       }
+                      Spacer()
                       if let salary = vacancy.salary {
                         Text(salary.description)
                           .font(.headline)

@@ -14,7 +14,6 @@ final class SearchViewModel: ObservableObject {
   @Published var salary: String = ""
   @Published var schedule: ScheduleVariants = .none
   @Published var text: String = ""
-  // TODO: - добавить @Published поля для всех поисковых параметров
   
   enum ScheduleVariants {
     case fullDay
@@ -61,8 +60,8 @@ final class SearchViewModel: ObservableObject {
   
   private func makeQueryDictionary() -> QueryDictionary {
     var queryDictionary = QueryDictionary()
-    if !salary.isEmpty {
-      queryDictionary["salary"] = "\(salary)"
+    if let int = Int(salary), !salary.isEmpty {
+      queryDictionary["salary"] = "\(int)"
       queryDictionary["currency"] = "RUR"
     }
     if schedule != .none {
@@ -83,11 +82,9 @@ final class SearchViewModel: ObservableObject {
       }
       queryDictionary["schedule"] = schedule
     }
-    if !text.isEmpty {
-      queryDictionary["text"] = "\(text)"
+    if let textWithPercentEncoding = text.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed), !text.isEmpty {
+      queryDictionary["text"] = "\(textWithPercentEncoding)"
     }
-    // TODO: - собрать все ЗАПОЛНЕННЫЕ @Published поля для поисковых параметров и передать Dictionary с ключами и значениями в метод fetch()
-    // TODO: - все @Published поля перед добавлением в Dictionary должны быть "обработаны" URLEncoded
     return queryDictionary
   }
 }
