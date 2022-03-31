@@ -18,11 +18,12 @@ final class VacanciesFetchService {
     self.decodingService = decodingService
   }
   
-    func fetch(page: Int) async throws -> Vacancies {
-      let adjustedComponents = urlComponents.addPageQueryItem(page)
-      let data = try await networkService.downloadData(with: adjustedComponents.url!)
-      let people = try decodingService.decode(data: data, of: Vacancies.self)
-      return people
+  func fetch(page: Int = 1, dictionary: QueryDictionary = [:]) async throws -> Vacancies {
+    var adjustedComponents = urlComponents.addPageQueryItem(page)
+    adjustedComponents.addQueryItems(dictionary)
+    let data = try await networkService.downloadData(with: adjustedComponents.url!)
+    let people = try decodingService.decode(data: data, of: Vacancies.self)
+    return people
   }
 }
 
@@ -40,8 +41,15 @@ extension URLComponents {
   
   fileprivate func addPageQueryItem(_ page: Int) -> URLComponents {
     var copy  = self
-    copy.queryItems?.append(.init(name: "page", value: "\(page)"))
+    copy.addQueryItems(["page": "\(page)"])
     return copy
+  }
+  
+  fileprivate mutating func addQueryItems(_ dictionary: [String: String]) {
+    guard !dictionary.isEmpty else { return }
+    for (key, value) in dictionary {
+      queryItems?.append(.init(name: key, value: value))
+    }
   }
 }
 

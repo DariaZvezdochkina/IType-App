@@ -45,6 +45,7 @@
 		5E58CB7B27EDE9890074CF5E /* HomeSmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */; };
 		5E7506C027C64A7D0065BFC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */; };
 		5E7506DC27CE30CB0065BFC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7506DB27CE30CB0065BFC0 /* HomeView.swift */; };
+		5E797E6827F4679B008A1045 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E797E6727F4679B008A1045 /* SearchViewModel.swift */; };
 		5E94CD7227F1EEC100C7528F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E94CD7027F1EEC100C7528F /* Localizable.strings */; };
 		5E94CD7527F1EEDC00C7528F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E94CD7327F1EEDC00C7528F /* Localizable.strings */; };
 		5EFB8AE027F1C46100993DCE /* DetailedEmployer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB8ADF27F1C46100993DCE /* DetailedEmployer.swift */; };
@@ -93,6 +94,7 @@
 		5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSmallCardView.swift; sourceTree = "<group>"; };
 		5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E7506DB27CE30CB0065BFC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5E797E6727F4679B008A1045 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		5E94CD7127F1EEC100C7528F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
 		5E94CD7427F1EEDC00C7528F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		5EFB8ADF27F1C46100993DCE /* DetailedEmployer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEmployer.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				5E5468C927EC6212006D11C5 /* DetailedVacancyViewModel.swift */,
 				5E5468C527E9EC9D006D11C5 /* VacanciesViewModel.swift */,
 				5EFB8AE527F1C5B900993DCE /* DetailedEmployerViewModel.swift */,
+				5E797E6727F4679B008A1045 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				5E5468C127E9E2B3006D11C5 /* VacanciesFetchService.swift in Sources */,
 				5E5468AD27E9DA2A006D11C5 /* Area.swift in Sources */,
 				5E5468B327E9DAE8006D11C5 /* Salary.swift in Sources */,
+				5E797E6827F4679B008A1045 /* SearchViewModel.swift in Sources */,
 				5E5468B727E9DC5D006D11C5 /* Address.swift in Sources */,
 				5E5468B927E9DC88006D11C5 /* Snippet.swift in Sources */,
 				5E49E5A927D8B3D00006BDB6 /* DetailedVacancyView.swift in Sources */,
