@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-  @State private var searchText = ""
   @ObservedObject private var vacanciesViewModel = VacanciesViewModel()
   @State var homeSmallCards = [
     HomeSmallCard(imageName: "createResume", title: LocalizedStringKey("homeView.createResumeCard")),
@@ -48,7 +47,6 @@ struct HomeView: View {
           Spacer()
         }
         .padding()
-        .searchable(text: $searchText, prompt: LocalizedStringKey("homeView.searchKeyTerms"))
         Spacer()
         VStack(spacing: 10) {
           ForEach(vacanciesViewModel.vacanciesResult) { vacancy in

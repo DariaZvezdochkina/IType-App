@@ -14,7 +14,7 @@ final class SearchViewModel: ObservableObject {
   @Published var salary: String = ""
   @Published var schedule: ScheduleVariants = .none
   @Published var text: String = ""
-  
+  @Published var searchText = ""
   enum ScheduleVariants {
     case fullDay
     case shift
