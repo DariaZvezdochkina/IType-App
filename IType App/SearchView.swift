@@ -61,32 +61,33 @@ struct SearchView: View {
                     .fontWeight(.semibold)
                     .font(.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                  VStack {
-                    HStack{
-                      Text("Choose:")
-                      Spacer()
-//                      Picker("Color", selection: ) {
-//                        ForEach(searchViewModel.schedule) {
-//                          Text($0)
-//                        }
-//                      }
-                    }
+                  HStack{
+                    Text("Choose:")
+                    Spacer()
+                    //                      Picker("Color", selection: ) {
+                    //                        ForEach(searchViewModel.schedule) {
+                    //                          Text($0)
+                    //                        }
+                    //                      }
                   }
+                  
                 }
                 Spacer()
               }
               .padding()
             }
           }
+          if searchText.isEmpty {
+            Text("Please, scroll down to see \nthe search field")
+              .multilineTextAlignment(.center)
+              .padding()
+              .foregroundColor(.gray)
+            
+          }
         }
         .navigationBarTitleDisplayMode(.inline)
         .padding()
         .searchable(text: $searchText, prompt: LocalizedStringKey("homeView.searchKeyTerms"))
-        .onChange(of: searchText) { searchText in
-          if searchText.isEmpty {
-            
-          }
-        }
       }
     }
   }
