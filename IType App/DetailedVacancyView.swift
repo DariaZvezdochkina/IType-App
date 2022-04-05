@@ -28,11 +28,13 @@ struct DetailedVacancyView: View {
                 VStack {
                   HStack {
                     AsyncImage(url: URL(string: detailedVacancy.employer.logoUrls.original)) { image in
-                      image.resizable()
+                      image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                     } placeholder: {
                       ProgressView()
                     }
-                    .frame(width: 100, height: 100, alignment: .leading)
+                    .frame(height: 100, alignment: .leading)
                     Spacer()
                   }
                   .padding()

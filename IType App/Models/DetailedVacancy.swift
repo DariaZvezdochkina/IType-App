@@ -15,7 +15,7 @@ struct DetailedVacancy: Codable {
   let billingType: BillingType
   let name: String
   let area: Area
-  let salary: Salary
+  let salary: Salary?
   let type: BillingType
   let allowMessages: Bool
   let site, experience, schedule, employment: BillingType
