@@ -84,7 +84,7 @@ struct HomeView: View {
                       Text(vacancy.schedule.description)
                         .font(.headline)
                         .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing) 
                         .padding(.trailing, 16)
                         .padding(.bottom, 10)
                     }

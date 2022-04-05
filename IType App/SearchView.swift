@@ -10,7 +10,8 @@ import SwiftUI
 struct SearchView: View {
   @ObservedObject private var searchViewModel = SearchViewModel()
   @State var presentPopup = false
-  @State var selectedItem: Int = 1
+  @State var searchText = ""
+  
   var body: some View {
     NavigationView {
       ScrollView {
@@ -64,11 +65,11 @@ struct SearchView: View {
                     HStack{
                       Text("Choose:")
                       Spacer()
-                      Picker("Color", selection: $selectedItem) {
-                        Text("Red").tag(0)
-                        Text("Blue").tag(1)
-                        Text("Green").tag(2)
-                      }
+//                      Picker("Color", selection: ) {
+//                        ForEach(searchViewModel.schedule) {
+//                          Text($0)
+//                        }
+//                      }
                     }
                   }
                 }
@@ -77,12 +78,15 @@ struct SearchView: View {
               .padding()
             }
           }
-          
-
         }
         .navigationBarTitleDisplayMode(.inline)
         .padding()
-        .searchable(text: $searchViewModel.searchText, prompt: LocalizedStringKey("homeView.searchKeyTerms"))
+        .searchable(text: $searchText, prompt: LocalizedStringKey("homeView.searchKeyTerms"))
+        .onChange(of: searchText) { searchText in
+          if searchText.isEmpty {
+            
+          }
+        }
       }
     }
   }

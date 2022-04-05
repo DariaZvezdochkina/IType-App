@@ -15,6 +15,7 @@ final class SearchViewModel: ObservableObject {
   @Published var schedule: ScheduleVariants = .none
   @Published var text: String = ""
   @Published var searchText = ""
+  
   enum ScheduleVariants {
     case fullDay
     case shift
@@ -24,12 +25,14 @@ final class SearchViewModel: ObservableObject {
     case none
   }
   
+  
   private let vacancyFetchingService: VacanciesFetchService
   private var page = 1
   
   init(vacancyFetchingService: VacanciesFetchService = VacanciesFetchService()) {
     self.vacancyFetchingService = vacancyFetchingService
   }
+
   
   @MainActor
   func fetchVacancies() async {

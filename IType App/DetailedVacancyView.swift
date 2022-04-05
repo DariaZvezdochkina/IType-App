@@ -120,6 +120,8 @@ struct DetailedVacancyView: View {
         }
         
       }
+      .navigationBarTitleDisplayMode(.inline)
+
     } else {
       ProgressView()
         .progressViewStyle(.circular)

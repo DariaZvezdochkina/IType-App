@@ -33,7 +33,7 @@ enum VacanciesFetchServiceError: Error {
 
 extension URLComponents {
   fileprivate static var vacancies: URLComponents {
-    guard let url = URLComponents(string: "https://api.hh.ru/vacancies?industry=7&per_page=5&area=113") else {
+    guard let url = URLComponents(string: "https://api.hh.ru/vacancies?industry=7&per_page=10&area=113") else {
       fatalError("...")
     }
       return url

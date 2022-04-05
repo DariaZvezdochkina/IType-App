@@ -10,7 +10,6 @@ import Foundation
 // MARK: - Vacancy
 struct Vacancy: Codable, Identifiable {
   let id: String
-  let premium: Bool
   let name: String
   let department: String?
   let area: Area
@@ -20,7 +19,9 @@ struct Vacancy: Codable, Identifiable {
   let schedule: Schedule
   
   enum CodingKeys: String, CodingKey {
-    case id, premium, name, department
+    case id
+    case name
+    case department
     case area
     case salary
     case employer
