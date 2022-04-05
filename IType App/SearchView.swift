@@ -26,7 +26,7 @@ struct SearchView: View {
                 .frame(width: 28, height: 28)
             }
             Spacer()
-            Text("Search")
+            Text(LocalizedStringKey("searchView.searchTitle"))
               .fontWeight(.semibold)
               .font(.title)
               .frame(maxWidth: .infinity, alignment: .center)

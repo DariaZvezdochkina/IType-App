@@ -21,3 +21,14 @@
 "homeView.searchKeyTerms" = "Job title, key words";
 
 "detailedVacancyView.respondButton" = "Respond";
+
+"tabsView.home" = "Home";
+"tabsView.profile" = "Profile";
+"tabsView.search" = "Search";
+"tabsView.favorites" = "Favorites";
+"tabsView.settings" = "Settings";
+
+"searchView.searchTitle" = "Search";
+
+
+

@@ -21,3 +21,14 @@
 "homeView.searchKeyTerms" = "Должность, ключевые слова";
 
 "detailedVacancyView.respondButton" = "Откликнуться";
+
+"tabsView.home" = "Домой";
+"tabsView.profile" = "Профиль";
+"tabsView.search" = "Поиск";
+"tabsView.favorites" = "Избранное";
+"tabsView.settings" = "Настройки";
+
+"searchView.searchTitle" = "Поиск";
+
+
+
