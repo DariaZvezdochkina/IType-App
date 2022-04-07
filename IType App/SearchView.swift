@@ -10,8 +10,8 @@ import SwiftUI
 struct SearchView: View {
   @ObservedObject private var searchViewModel = SearchViewModel()
   @State var isPresented: Bool = false
-  @State private var selectedSchedule = 0
-    
+  @State var selectedSchedule: SearchViewModel.ScheduleVariants = .none
+  
   var body: some View {
     NavigationView {
       ScrollView {
@@ -45,39 +45,7 @@ struct SearchView: View {
           ) {
             print("The sheet has been dismissed")
           } content: {
-            VStack(spacing: 25) {
-              VStack {
-                Text("Salary")
-                  .fontWeight(.semibold)
-                  .font(.title)
-                  .frame(maxWidth: .infinity, alignment: .leading)
-                HStack {
-                  Text("To:")
-                  Spacer()
-                  TextField("Type amount", text: $searchViewModel.salary)
-                }
-              }
-              .padding(25)
-              VStack {
-                Text("Schedule")
-                  .fontWeight(.semibold)
-                  .font(.title)
-                  .frame(maxWidth: .infinity, alignment: .leading)
-                HStack{
-                  Spacer()
-                  VStack{
-                    Picker(selection: $selectedSchedule, label: Text("Schedule")) {
-                      ForEach(SearchViewModel.ScheduleVariants.allCases, id: \.self) { sch in
-                        Text("\(sch.rawValue)")
-                      }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                  }
-                }
-              }
-              .padding(25)
-              Spacer()
-            }
+            FiltersView(searchViewModel: searchViewModel, isPresented: $isPresented, selectedSchedule: $selectedSchedule)
           }
           if searchViewModel.text.isEmpty {
             Text("Please, scroll down to see \nthe search field")
@@ -175,17 +143,13 @@ struct SheetPresentationForSwiftUI<Content>: UIViewRepresentable where Content: 
   
   func updateUIView(_ uiView: UIView, context: Context) {
     
-    // Create the UIViewController that will be presented by the UIButton
     let viewController = UIViewController()
     
-    // Create the UIHostingController that will embed the SwiftUI View
     let hostingController = UIHostingController(rootView: content)
     
-    // Add the UIHostingController to the UIViewController
     viewController.addChild(hostingController)
     viewController.view.addSubview(hostingController.view)
     
-    // Set constraints
     hostingController.view.translatesAutoresizingMaskIntoConstraints = false
     hostingController.view.leftAnchor.constraint(equalTo: viewController.view.leftAnchor).isActive = true
     hostingController.view.topAnchor.constraint(equalTo: viewController.view.topAnchor).isActive = true
@@ -193,7 +157,6 @@ struct SheetPresentationForSwiftUI<Content>: UIViewRepresentable where Content: 
     hostingController.view.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor).isActive = true
     hostingController.didMove(toParent: viewController)
     
-    // Set the presentationController as a UISheetPresentationController
     if let sheetController = viewController.presentationController as? UISheetPresentationController {
       sheetController.detents = detents
       sheetController.prefersGrabberVisible = true
@@ -201,24 +164,18 @@ struct SheetPresentationForSwiftUI<Content>: UIViewRepresentable where Content: 
       sheetController.largestUndimmedDetentIdentifier = .medium
     }
     
-    // Set the coordinator (delegate)
-    // We need the delegate to use the presentationControllerDidDismiss function
     viewController.presentationController?.delegate = context.coordinator
     
     
     if isPresented {
-      // Present the viewController
       uiView.window?.rootViewController?.present(viewController, animated: true)
     } else {
-      // Dismiss the viewController
       uiView.window?.rootViewController?.dismiss(animated: true)
     }
     
   }
   
-  /* Creates the custom instance that you use to communicate changes
-   from your view controller to other parts of your SwiftUI interface.
-   */
+
   func makeCoordinator() -> Coordinator {
     Coordinator(isPresented: $isPresented, onDismiss: onDismiss)
   }

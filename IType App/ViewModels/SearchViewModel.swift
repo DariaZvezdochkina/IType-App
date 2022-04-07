@@ -11,9 +11,10 @@ typealias QueryDictionary = [String: String]
 final class SearchViewModel: ObservableObject {
   @Published var vacancies: [Vacancy] = []
   @Published var presentedError = false
-  @Published var salary: String = ""
   @Published var schedule: ScheduleVariants = .none
   @Published var text: String = ""
+  @Published var salaryTo: String = ""
+  @Published var isPresentedSalaryTo = true
   
   enum ScheduleVariants: String, CaseIterable {
     case fullDay
@@ -64,10 +65,7 @@ final class SearchViewModel: ObservableObject {
   
   private func makeQueryDictionary() -> QueryDictionary {
     var queryDictionary = QueryDictionary()
-    if let int = Int(salary), !salary.isEmpty {
-      queryDictionary["salary"] = "\(int)"
-      queryDictionary["currency"] = "RUR"
-    }
+    
     if schedule != .none {
       let schedule: String
       switch self.schedule {
@@ -90,7 +88,16 @@ final class SearchViewModel: ObservableObject {
       queryDictionary["text"] = "\(text)"
       queryDictionary["enable_snippets"] = "true"
     }
+    
+    addSalaryIfNeeded(to: &queryDictionary)
     return queryDictionary
+  }
+  
+  private func addSalaryIfNeeded(to dictionary: inout [String: String]) {
+    guard isPresentedSalaryTo && !salaryTo.isEmpty else { return }
+    guard let value = Int(salaryTo) else { return }
+    dictionary["salary"] = "\(value)"
+    dictionary["currency"] = "RUR"
   }
 }
 
