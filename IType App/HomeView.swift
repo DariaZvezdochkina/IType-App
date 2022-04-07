@@ -51,7 +51,7 @@ struct HomeView: View {
         VStack(spacing: 10) {
           ForEach(vacanciesViewModel.vacanciesResult) { vacancy in
             RoundedRectangle(cornerRadius: 30)
-              .shadow(color: Color("MainFrameColor"), radius: 3)
+              .shadow(color: Color("MainFrameColor"), radius: 2)
               .overlay(
                 VStack {
                   NavigationLink(destination: DetailedVacancyView(viewModel: .init(vacancyId: vacancy.id))) {
@@ -86,7 +86,7 @@ struct HomeView: View {
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(.trailing, 16)
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 15)
                     }
                     .foregroundColor(.black)
                   }

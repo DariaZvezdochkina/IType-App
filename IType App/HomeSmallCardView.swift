@@ -11,7 +11,7 @@ struct HomeSmallCardView: View {
   var card: HomeSmallCard
   var body: some View {
     RoundedRectangle(cornerRadius: 30)
-      .shadow(color: Color("MainFrameColor"), radius: 4)
+      .shadow(color: Color("MainFrameColor"), radius: 2)
       .overlay(
         HStack {
           VStack(alignment: .leading) {
