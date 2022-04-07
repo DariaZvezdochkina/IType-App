@@ -11,15 +11,11 @@ import Foundation
 struct Vacancies: Codable {
     let vacancies: [Vacancy]
     let found, pages, perPage, page: Int
-    let clusters, arguments: String?
-    let alternateURL: String
 
     enum CodingKeys: String, CodingKey {
         case vacancies = "items"
         case found, pages
         case perPage = "per_page"
         case page
-        case clusters, arguments
-        case alternateURL = "alternate_url"
     }
 }

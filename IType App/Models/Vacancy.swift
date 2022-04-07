@@ -11,7 +11,6 @@ import Foundation
 struct Vacancy: Codable, Identifiable {
   let id: String
   let name: String
-  let department: String?
   let area: Area
   let salary: Salary?
   let employer: Employer
@@ -21,7 +20,6 @@ struct Vacancy: Codable, Identifiable {
   enum CodingKeys: String, CodingKey {
     case id
     case name
-    case department
     case area
     case salary
     case employer

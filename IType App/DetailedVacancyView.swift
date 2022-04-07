@@ -27,15 +27,18 @@ struct DetailedVacancyView: View {
             NavigationLink(destination: DetailedEmployerView(viewModel: .init(employerId: detailedVacancy.employer.id))) {
                 VStack {
                   HStack {
-                    AsyncImage(url: URL(string: detailedVacancy.employer.logoUrls.original)) { image in
-                      image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    } placeholder: {
-                      ProgressView()
+                    if let logo = detailedVacancy.employer.logoUrls?.original {
+                      AsyncImage(url: URL(string: logo)) { image in
+                        image
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+                      } placeholder: {
+                        ProgressView()
+                      }
+                      .frame(height: 100, alignment: .leading)
+                      Spacer()
                     }
-                    .frame(height: 100, alignment: .leading)
-                    Spacer()
+                    
                   }
                   .padding()
                   Text(detailedVacancy.employer.name)

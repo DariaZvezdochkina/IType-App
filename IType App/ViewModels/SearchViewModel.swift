@@ -14,9 +14,8 @@ final class SearchViewModel: ObservableObject {
   @Published var salary: String = ""
   @Published var schedule: ScheduleVariants = .none
   @Published var text: String = ""
-  @Published var searchText = ""
   
-  enum ScheduleVariants {
+  enum ScheduleVariants: String, CaseIterable {
     case fullDay
     case shift
     case flexible
@@ -25,6 +24,7 @@ final class SearchViewModel: ObservableObject {
     case none
   }
   
+
   
   private let vacancyFetchingService: VacanciesFetchService
   private var page = 1
@@ -37,6 +37,7 @@ final class SearchViewModel: ObservableObject {
   @MainActor
   func fetchVacancies() async {
     page = 1
+    self.vacancies = []
     let vacancies = await makeRequest()
     self.vacancies = vacancies
   }
@@ -85,8 +86,9 @@ final class SearchViewModel: ObservableObject {
       }
       queryDictionary["schedule"] = schedule
     }
-    if let textWithPercentEncoding = text.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed), !text.isEmpty {
-      queryDictionary["text"] = "\(textWithPercentEncoding)"
+    if !text.isEmpty {
+      queryDictionary["text"] = "\(text)"
+      queryDictionary["enable_snippets"] = "true"
     }
     return queryDictionary
   }

@@ -15,7 +15,7 @@
 "favoritesView.searchButton" = "Find jobs";
 
 "homeView.createResumeCard" = "Create a resume";
-"homeView.jobsNearCard" = "Jobs Near You";
+"homeView.jobsNearCard" = "Jobs \nNear You";
 "homeView.newsCard" = "News";
 "homeView.vacanciesForYou" = "Vacancies For You";
 "homeView.searchKeyTerms" = "Job title, key words";

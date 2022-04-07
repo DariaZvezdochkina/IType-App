@@ -9,15 +9,11 @@ import Foundation
 
 // MARK: - Employer
 struct Employer: Codable {
-    let id, name: String
-    let url, alternateURL: String
-    let logoUrls: LogoUrls
-    let vacanciesURL: String
-
-    enum CodingKeys: String, CodingKey {
-        case id, name, url
-        case alternateURL = "alternate_url"
-        case logoUrls = "logo_urls"
-        case vacanciesURL = "vacancies_url"
-    }
+  let id, name: String
+  let logoUrls: LogoUrls?
+  
+  enum CodingKeys: String, CodingKey {
+    case id, name
+    case logoUrls = "logo_urls"
+  }
 }

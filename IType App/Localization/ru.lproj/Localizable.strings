@@ -15,7 +15,7 @@
 "favoritesView.searchButton" = "Найти вакансии";
 
 "homeView.createResumeCard" = "Создайте резюме";
-"homeView.jobsNearCard" = "Работа рядом с Вами";
+"homeView.jobsNearCard" = "Работа рядом";
 "homeView.newsCard" = "Новости";
 "homeView.vacanciesForYou" = "Вакансии для Вас";
 "homeView.searchKeyTerms" = "Должность, ключевые слова";

@@ -36,7 +36,9 @@ struct DetailedEmployerView: View {
             .padding(.leading, 16)
           HStack {
             AsyncImage(url: URL(string: detailedEmployer.logoUrls.original)) { image in
-              image.resizable()
+                image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
             } placeholder: {
               ProgressView()
             }
