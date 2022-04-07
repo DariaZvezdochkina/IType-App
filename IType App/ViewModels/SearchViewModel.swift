@@ -48,9 +48,7 @@ final class SearchViewModel: ObservableObject {
     let nextPortion = await makeRequest()
     vacancies += nextPortion
   }
-  
-  // MARK: - Private methods
-  
+    
   private func makeRequest() async -> [Vacancy] {
     do {
       let dictionary = makeQueryDictionary()
