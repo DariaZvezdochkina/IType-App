@@ -42,7 +42,9 @@ This project is being developed because the IT industry is rapidly growing and a
 
 To run this project, install it locally using npm:
 
-$cd ../IType\ App
-$npm install
-$npm start
+```
+$ cd ../IType\ App
+$ npm install
+$ npm start
+```
 
