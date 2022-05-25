@@ -2,6 +2,14 @@
 
 MVP of mobile applications for job search.
 
+<img width="281" alt="Screenshot 2022-05-25 at 13 26 18" src="https://user-images.githubusercontent.com/57398072/170241596-031cabfe-97f8-469f-bd17-37b66093bf4e.png">
+<img width="286" alt="Screenshot 2022-05-25 at 13 26 11" src="https://user-images.githubusercontent.com/57398072/170241603-dab6e124-a19b-44a6-b136-909f0bd32b9c.png">
+<img width="277" alt="Screenshot 2022-05-25 at 13 26 01" src="https://user-images.githubusercontent.com/57398072/170241608-e4de2882-d18a-466b-b5a6-cf177e2bf40a.png">
+<img width="283" alt="Screenshot 2022-05-25 at 13 25 51" src="https://user-images.githubusercontent.com/57398072/170241617-a81c56d0-6ea5-47c6-9045-86c72e644b80.png">
+<img width="286" alt="Screenshot 2022-05-25 at 13 25 24" src="https://user-images.githubusercontent.com/57398072/170241621-d4ceace0-2d75-4050-b083-110629ec3eb8.png">
+<img width="262" alt="Screenshot 2022-05-25 at 13 24 32" src="https://user-images.githubusercontent.com/57398072/170241625-fc0ca062-a024-4d70-9e2b-a9710365a3e9.png">
+
+
 ## Project description
 
 The applicaton allows the user to view vacancies, which in tern contain:
