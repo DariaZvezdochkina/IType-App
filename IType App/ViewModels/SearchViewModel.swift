@@ -1,10 +1,3 @@
-//
-//  SearchViewModel.swift
-//  IType App
-//
-//  Created by Daria Zvezdochkina on 30.03.2022.
-//
-
 import Foundation
 
 typealias QueryDictionary = [String: String]
@@ -25,7 +18,7 @@ final class SearchViewModel: ObservableObject {
     case none
   }
   
-
+  
   
   private let vacancyFetchingService: VacanciesFetchService
   private var page = 1
@@ -33,7 +26,7 @@ final class SearchViewModel: ObservableObject {
   init(vacancyFetchingService: VacanciesFetchService = VacanciesFetchService()) {
     self.vacancyFetchingService = vacancyFetchingService
   }
-
+  
   
   @MainActor
   func fetchVacancies() async {
@@ -48,7 +41,7 @@ final class SearchViewModel: ObservableObject {
     let nextPortion = await makeRequest()
     vacancies += nextPortion
   }
-    
+  
   private func makeRequest() async -> [Vacancy] {
     do {
       let dictionary = makeQueryDictionary()

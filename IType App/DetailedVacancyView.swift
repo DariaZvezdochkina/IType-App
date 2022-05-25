@@ -1,9 +1,3 @@
-//
-//  VacancyView.swift
-//  IType App
-//
-//  Created by Daria Zvezdochkina on 09.03.2022.
-//
 import Foundation
 import SwiftUI
 
@@ -25,30 +19,30 @@ struct DetailedVacancyView: View {
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 16)
             NavigationLink(destination: DetailedEmployerView(viewModel: .init(employerId: detailedVacancy.employer.id))) {
-                VStack {
-                  HStack {
-                    if let logo = detailedVacancy.employer.logoUrls?.original {
-                      AsyncImage(url: URL(string: logo)) { image in
-                        image
-                          .resizable()
-                          .aspectRatio(contentMode: .fit)
-                      } placeholder: {
-                        ProgressView()
-                      }
-                      .frame(height: 100, alignment: .leading)
-                      Spacer()
+              VStack {
+                HStack {
+                  if let logo = detailedVacancy.employer.logoUrls?.original {
+                    AsyncImage(url: URL(string: logo)) { image in
+                      image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    } placeholder: {
+                      ProgressView()
                     }
-                    
+                    .frame(height: 100, alignment: .leading)
+                    Spacer()
                   }
-                  .padding()
-                  Text(detailedVacancy.employer.name)
-                    .foregroundColor(Color("MainFrameColor"))
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 16)
+                  
                 }
+                .padding()
+                Text(detailedVacancy.employer.name)
+                  .foregroundColor(Color("MainFrameColor"))
+                  .font(.headline)
+                  .fontWeight(.bold)
+                  .frame(maxWidth: .infinity, alignment: .leading)
+                  .padding(.leading, 16)
               }
+            }
             
             if let salary = detailedVacancy.salary {
               Text(salary.description)
@@ -80,7 +74,7 @@ struct DetailedVacancyView: View {
                   .frame(maxWidth: .infinity, alignment: .leading)
                   .padding(.leading, 16)
                   .padding(.trailing, 25)
-
+                
               }
               .padding(.bottom, 10)
               .padding(.leading, 50)
@@ -126,7 +120,7 @@ struct DetailedVacancyView: View {
         
       }
       .navigationBarTitleDisplayMode(.inline)
-
+      
     } else {
       ProgressView()
         .progressViewStyle(.circular)
@@ -143,7 +137,7 @@ struct DetailedVacancyView_Previews: PreviewProvider {
     NavigationView {
       DetailedVacancyView(viewModel: .init(vacancyId: "53735875"))
     }
-//                            .environment(\.locale, .init(identifier: "ru"))
-
+    //                            .environment(\.locale, .init(identifier: "ru"))
+    
   }
 }

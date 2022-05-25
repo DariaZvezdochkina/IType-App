@@ -1,10 +1,3 @@
-//
-//  HomeSmallCardView.swift
-//  IType App
-//
-//  Created by Daria Zvezdochkina on 25.03.2022.
-//
-
 import SwiftUI
 
 struct HomeSmallCardView: View {
@@ -25,11 +18,11 @@ struct HomeSmallCardView: View {
               .font(.headline)
             
           }
-            .foregroundColor(.black)
-            .padding()
+          .foregroundColor(.black)
+          .padding()
           Spacer()
         }
-       
+        
       )
       .foregroundColor(Color.white)
       .frame(width: 145, height: 145)

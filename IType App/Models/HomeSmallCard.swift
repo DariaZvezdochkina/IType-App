@@ -1,10 +1,3 @@
-//
-//  HomeSmallCard.swift
-//  IType App
-//
-//  Created by Daria Zvezdochkina on 25.03.2022.
-//
-
 import Foundation
 import SwiftUI
 

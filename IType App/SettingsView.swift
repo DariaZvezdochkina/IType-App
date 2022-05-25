@@ -1,10 +1,3 @@
-//
-//  SettingsView.swift
-//  IType App
-//
-//  Created by Daria Zvezdochkina on 03.03.2022.
-//
-
 import SwiftUI
 
 struct SettingsView: View {

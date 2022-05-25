@@ -1,10 +1,3 @@
-//
-//  SearchView.swift
-//  IType App
-//
-//  Created by Daria Zvezdochkina on 29.03.2022.
-//
-
 import SwiftUI
 
 struct SearchView: View {
@@ -175,7 +168,7 @@ struct SheetPresentationForSwiftUI<Content>: UIViewRepresentable where Content: 
     
   }
   
-
+  
   func makeCoordinator() -> Coordinator {
     Coordinator(isPresented: $isPresented, onDismiss: onDismiss)
   }
@@ -225,8 +218,7 @@ struct sheetWithDetentsViewModifier<SwiftUIContent>: ViewModifier where SwiftUIC
 }
 
 extension View {
-  
-  func sheetWithDetents<Content>(
+    func sheetWithDetents<Content>(
     isPresented: Binding<Bool>,
     detents: [UISheetPresentationController.Detent],
     onDismiss: (() -> Void)?,

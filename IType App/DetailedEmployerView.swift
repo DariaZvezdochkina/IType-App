@@ -1,10 +1,3 @@
-//
-//  CompanyView.swift
-//  IType App
-//
-//  Created by Daria Zvezdochkina on 28.03.2022.
-//
-
 import SwiftUI
 
 struct DetailedEmployerView: View {
@@ -36,7 +29,7 @@ struct DetailedEmployerView: View {
             .padding(.leading, 16)
           HStack {
             AsyncImage(url: URL(string: detailedEmployer.logoUrls.original)) { image in
-                image
+              image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             } placeholder: {

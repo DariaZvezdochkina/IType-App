@@ -1,10 +1,3 @@
-//
-//  HomeView.swift
-//  IType App
-//
-//  Created by Daria Zvezdochkina on 01.03.2022.
-//
-
 import SwiftUI
 
 struct HomeView: View {
@@ -39,7 +32,7 @@ struct HomeView: View {
           .padding()
         }
         .navigationBarTitleDisplayMode(.inline)
-
+        
         VStack(alignment: .trailing) {
           Text(LocalizedStringKey("homeView.vacanciesForYou"))
             .fontWeight(.semibold)
@@ -61,7 +54,7 @@ struct HomeView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding()
-
+                      
                       Text(vacancy.area.name)
                         .font(.headline)
                         .fontWeight(.bold)
@@ -80,7 +73,7 @@ struct HomeView: View {
                           .fontWeight(.bold)
                           .frame(maxWidth: .infinity, alignment: .trailing)
                           .padding(.trailing, 16)
-                          
+                        
                       }
                       Text(vacancy.schedule.description)
                         .font(.headline)
@@ -113,7 +106,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
     TabsView(route: .home)
-//                        .environment(\.locale, .init(identifier: "ru"))
-
+    //                        .environment(\.locale, .init(identifier: "ru"))
+    
   }
 }
