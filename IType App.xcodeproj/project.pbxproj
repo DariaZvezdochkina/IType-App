@@ -137,24 +137,12 @@
 		5E10C0A027C3BEB300D9B5E2 /* IType App */ = {
 			isa = PBXGroup;
 			children = (
-				5E94CD6D27F1EE6E00C7528F /* Localization */,
-				5E5468C227E9E4D9006D11C5 /* ViewModels */,
 				5E5468A727E9D7A3006D11C5 /* Models */,
+				5EFD11BF283E434C00F389FF /* Views */,
+				5E5468C227E9E4D9006D11C5 /* ViewModels */,
+				5E94CD6D27F1EE6E00C7528F /* Localization */,
 				5E10C0B327C3D2DD00D9B5E2 /* Services */,
 				5E10C0A127C3BEB300D9B5E2 /* IType_AppApp.swift */,
-				5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */,
-				5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */,
-				5E49E5A827D8B3D00006BDB6 /* DetailedVacancyView.swift */,
-				5E1788CB27F1B47E000DA670 /* DetailedEmployerView.swift */,
-				5E7506DB27CE30CB0065BFC0 /* HomeView.swift */,
-				5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */,
-				5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */,
-				5E38B88927F30F8A00E0686C /* SearchView.swift */,
-				5E35BBE327FF0AD8009C70D8 /* FiltersView.swift */,
-				5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */,
-				5E49E5A227D0DC630006BDB6 /* SettingsView.swift */,
-				5E49E5A627D8AB460006BDB6 /* SettingsCell.swift */,
-				5E10C0A327C3BEB300D9B5E2 /* ContentView.swift */,
 				5E7506BF27C64A7D0065BFC0 /* GoogleService-Info.plist */,
 				5E10C0A527C3BEBC00D9B5E2 /* Assets.xcassets */,
 				5E10C0A727C3BEBC00D9B5E2 /* Preview Content */,
@@ -241,6 +229,26 @@
 				5E94CD7027F1EEC100C7528F /* Localizable.strings */,
 			);
 			path = ru.lproj;
+			sourceTree = "<group>";
+		};
+		5EFD11BF283E434C00F389FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E10C15E27C50A6B00D9B5E2 /* SplashView.swift */,
+				5E10C0AF27C3C1D100D9B5E2 /* TabsView.swift */,
+				5E49E5A827D8B3D00006BDB6 /* DetailedVacancyView.swift */,
+				5E1788CB27F1B47E000DA670 /* DetailedEmployerView.swift */,
+				5E7506DB27CE30CB0065BFC0 /* HomeView.swift */,
+				5E58CB7A27EDE9890074CF5E /* HomeSmallCardView.swift */,
+				5E10C0B127C3CD1700D9B5E2 /* ProfileView.swift */,
+				5E38B88927F30F8A00E0686C /* SearchView.swift */,
+				5E35BBE327FF0AD8009C70D8 /* FiltersView.swift */,
+				5E49E5A427D8A4A10006BDB6 /* FavouritesView.swift */,
+				5E49E5A227D0DC630006BDB6 /* SettingsView.swift */,
+				5E49E5A627D8AB460006BDB6 /* SettingsCell.swift */,
+				5E10C0A327C3BEB300D9B5E2 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
