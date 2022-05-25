@@ -38,11 +38,10 @@ struct HomeView: View {
             .fontWeight(.semibold)
             .font(.title)
             .frame(maxWidth: .infinity, alignment: .leading)
-          Spacer()
         }
         .padding()
-        Spacer()
-        VStack(spacing: 10) {
+      
+        VStack {
           ForEach(vacanciesViewModel.vacanciesResult) { vacancy in
             RoundedRectangle(cornerRadius: 30)
               .shadow(color: Color("MainFrameColor"), radius: 2)
