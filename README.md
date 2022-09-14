@@ -11,13 +11,13 @@ MVP of mobile applications for job search.
 
 ## Project description
 
-The applicaton allows the user to view vacancies, which in tern contain:
+The applicaton allows the user to view ans also search vacancies, which in tern contain:
 
 - job description
 - requirments 
 - location 
 - salary
-- job expereinece
+- job experience
 - name of providing company
 - schedule description
 
